@@ -1,0 +1,200 @@
+<?php
+
+// Creating custom tokens
+
+function truclean_icons_token_info() {
+  $info = array();
+  // Define a new token type.
+  $info['types']['icon'] = array(
+    'name' => t('Icons'),
+    'description' => t('A token type for icons.'),
+  );
+  // Define any new tokens.
+  $info['tokens']['icon']['logo'] = array(
+    'name' => t('Site Logo'),
+    'description' => t('Displays the site logo'),
+  );
+  $info['tokens']['icon']['icon-mobile'] = array(
+    'name' => t('Mobile Icon'),
+    'description' => t('A mobile phone icon'),
+  );
+  $info['tokens']['icon']['icon-circle-up'] = array(
+    'name' => t('Circle Up Icon'),
+    'description' => t('An up-pointing chevron inside a circle icon'),
+  );
+  $info['tokens']['icon']['icon-file-text'] = array(
+    'name' => t('File Icon'),
+    'description' => t('A file/document icon'),
+  );
+  $info['tokens']['icon']['icon-cart'] = array(
+    'name' => t('Cart Icon'),
+    'description' => t('A shopping cart icon'),
+  );
+  $info['tokens']['icon']['icon-search'] = array(
+    'name' => t('Search Icon'),
+    'description' => t('A search icon'),
+  );
+  $info['tokens']['icon']['icon-box-add'] = array(
+    'name' => t('Download Icon'),
+    'description' => t('A download icon inside a box'),
+  );
+  $info['tokens']['icon']['icon-stats-dots'] = array(
+    'name' => t('Statistics Icon'),
+    'description' => t('A chart/statistics icon'),
+  );
+  $info['tokens']['icon']['icon-spoon-knife'] = array(
+    'name' => t('Spoon Knife Icon'),
+    'description' => t('A spoon and knife icon'),
+  );
+  $info['tokens']['icon']['icon-home'] = array(
+    'name' => t('Home Icon'),
+    'description' => t('A home icon'),
+  );
+  $info['tokens']['icon']['icon-truck'] = array(
+    'name' => t('Truck Icon'),
+    'description' => t('A truck icon'),
+  );
+  $info['tokens']['icon']['icon-clipboard'] = array(
+    'name' => t('Clipboard Icon'),
+    'description' => t('A clipboard icon'),
+  );
+  $info['tokens']['icon']['icon-eye'] = array(
+    'name' => t('Eye Icon'),
+    'description' => t('An eye icon'),
+  );
+  $info['tokens']['icon']['icon-cancel-circle'] = array(
+    'name' => t('Cancel Icon'),
+    'description' => t('A cancel icon'),
+  );
+  $info['tokens']['icon']['icon-cross'] = array(
+    'name' => t('Cross Icon'),
+    'description' => t('A cross out icon'),
+  );
+  $info['tokens']['icon']['icon-checkmark'] = array(
+    'name' => t('Checkmark Icon'),
+    'description' => t('A checkmark icon'),
+  );
+  $info['tokens']['icon']['icon-loop2'] = array(
+    'name' => t('Loop Icon'),
+    'description' => t('A loop icon'),
+  );
+  $info['tokens']['icon']['icon-circle-down'] = array(
+    'name' => t('Circle Down Icon'),
+    'description' => t('A down-pointing chevron inside a circle icon'),
+  );
+  $info['tokens']['icon']['icon-circle-left'] = array(
+    'name' => t('Circle Left Icon'),
+    'description' => t('A left-pointing chevron inside a circle icon'),
+  );
+  $info['tokens']['icon']['icon-file-pdf'] = array(
+    'name' => t('PDF Document Icon'),
+    'description' => t('A PDF document icon'),
+  );
+  $info['tokens']['icon']['icon-aid-kit'] = array(
+    'name' => t('PDF Document Icon'),
+    'description' => t('A PDF document icon'),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function truclean_icons_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+
+  if ($type == 'icon') {
+    // Loop through the available tokens.
+    foreach ($tokens as $name => $original) {
+      // Find our custom tokens by name.
+      switch ($name) {
+        case 'logo':
+          // Give our token it's value!
+          $replacements[$original] =  '<img src="' . theme_get_setting('logo') . '" alt="' . variable_get('site_name') . '">';
+          break;
+        case 'icon-mobile':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-mobile"><use xlink:href="#icon-mobile"></use></svg>';
+          break;
+        case 'icon-circle-up':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-circle-up"><use xlink:href="#icon-circle-up"></use></svg>';
+          break;
+        case 'icon-file-text':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-file-text"><use xlink:href="#icon-file-text"></use></svg>';
+          break;
+        case 'icon-cart':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg>';
+          break;
+        case 'icon-search':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>';
+          break;
+        case 'icon-box-add':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-box-add"><use xlink:href="#icon-box-add"></use></svg>';
+          break;
+        case 'icon-stats-dots':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-stats-dots"><use xlink:href="#icon-stats-dots"></use></svg>';
+          break;
+        case 'icon-spoon-knife':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-spoon-knife"><use xlink:href="#icon-spoon-knife"></use></svg>';
+          break;
+        case 'icon-home':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-home"><use xlink:href="#icon-home"></use></svg>';
+          break;
+        case 'icon-truck':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-truck"><use xlink:href="#icon-truck"></use></svg>';
+          break;
+        case 'icon-clipboard':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-clipboard"><use xlink:href="#icon-clipboard"></use></svg>';
+          break;
+        case 'icon-eye':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-eye"><use xlink:href="#icon-eye"></use></svg>';
+          break;
+        case 'icon-cancel-circle':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-cancel-circle"><use xlink:href="#icon-cancel-circle"></use></svg>';
+          break;
+        case 'icon-cross':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>';
+          break;
+        case 'icon-checkmark':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-checkmark"><use xlink:href="#icon-checkmark"></use></svg>';
+          break;
+        case 'icon-loop2':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-loop2"><use xlink:href="#icon-loop2"></use></svg>';
+          break;
+        case 'icon-circle-down':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-circle-down"><use xlink:href="#icon-circle-down"></use></svg>';
+          break;
+        case 'icon-circle-left':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-circle-left"><use xlink:href="#icon-circle-left"></use></svg>';
+          break;
+        case 'icon-file-pdf':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-file-pdf"><use xlink:href="#icon-file-pdf"></use></svg>';
+          break;
+        case 'icon-aid-kit':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-aid-kit"><use xlink:href="#icon-aid-kit"></use></svg>';
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}

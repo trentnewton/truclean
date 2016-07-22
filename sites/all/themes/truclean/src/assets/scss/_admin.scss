@@ -1,0 +1,78 @@
+// Drupal css for admin
+
+// ul.navbar-menu {
+//   font-size: inherit;
+// }
+
+.container-inline {
+
+    div,
+    label {
+        display: inherit;
+    }
+
+}
+
+.form-item,
+.form-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.search-form {
+    margin-bottom: 0;
+}
+
+.grippie {
+    @extend .hide;
+}
+
+th.active {
+
+    img {
+        width: initial;
+    }
+
+}
+
+.quickedit-toolbar.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.quickedit-button.icon {
+  line-height: normal;
+  width: initial;
+  height: initial;
+}
+
+ul.primary {
+  border-bottom: 1px solid #bbb;
+  border-collapse: collapse;
+  height: auto;
+  line-height: normal;
+  list-style: none;
+  margin: 5px;
+  padding: 0 0 0 1em;
+  /* LTR */
+  white-space: nowrap;
+
+    li {
+        display: inline;
+
+        a {
+            background-color: #ddd;
+            border-color: #bbb;
+            border-style: solid solid none solid;
+            border-width: 1px;
+            height: auto;
+            margin-right: 0.5em;
+            /* LTR */
+            padding: 0 1em;
+            text-decoration: none;
+        }
+
+    }
+
+}

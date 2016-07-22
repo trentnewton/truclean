@@ -1,0 +1,285 @@
+/*----------------------------------*/
+/*  Header
+/*----------------------------------*/
+
+.top-header-wrap {
+    padding: rem-calc(34 0);
+
+    .truclean {
+        width: rem-calc(270);
+        height: rem-calc(82);
+    }
+
+    li.is-active {
+
+        > a {
+            background-color: $primary-color;
+            color: $white;
+        }
+
+        &.is-dropdown-submenu-parent {
+
+            > a:after {
+                border-color: $anchor-color-hover transparent transparent;
+            }
+
+        }
+
+    }
+
+    .is-dropdown-submenu {
+        border: none;
+
+        li {
+
+            a {
+                background-color: $primary-color-lighter-5;
+            }
+
+            &:hover,
+            &:focus {
+
+                a {
+                    background-color: $primary-color-lighter-4;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.top-header-menu {
+    padding-top: rem-calc(15);
+    padding-bottom: rem-calc(15);
+
+    &.first-menu {
+
+        @include breakpoint(small only) {
+            padding-bottom: 0;
+        }
+
+        > li {
+            float: right;
+
+            @include breakpoint(small only) {
+                float: none;
+                width: 50vw;
+                text-align: center;
+            }
+
+        }
+
+    }
+
+}
+
+.css-columns {
+    columns: 100px 2;
+    column-gap: 0;
+    column-rule: 1px solid $grey-3;
+
+    @include breakpoint(small only) {
+        columns: 1;
+    }
+
+}
+
+.login-column,
+.register-column {
+    break-inside: avoid;
+    padding: rem-calc(30);
+}
+
+.login-column {
+
+    @include breakpoint(small only) {
+        border-bottom: 1px solid $grey-3;
+    }
+
+}
+
+// search box
+
+.search-box {
+    position: relative;
+    min-width: rem-calc(40);
+    width: 0;
+    height: rem-calc(40);
+    float: right;
+    overflow: hidden;
+    transition: width 0.3s;
+
+    @include breakpoint(small only) {
+        width: 100%;
+    }
+
+}
+
+.search-box-icon,
+.search-box-submit {
+    width: rem-calc(40);
+    height: rem-calc(40);
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: rem-calc(40);
+    text-align: center;
+    cursor: pointer;
+    color: $anchor-color;
+    background: white;
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus {
+        color: $anchor-color-hover;
+    }
+
+    @include breakpoint(small only) {
+        color: white;
+        background: $anchor-color;
+
+        &:hover,
+        &:focus {
+            color: white;
+            background: $anchor-color-hover;
+        }
+
+    }
+
+}
+
+.search-box-input[type="search"] {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: rem-calc(40);
+    margin: 0;
+}
+
+.search-box-open {
+    width: 100%;
+
+    .search-box-icon,
+    .search-box-submit {
+        color: white;
+        background: $anchor-color;
+
+        &:hover,
+        &:focus {
+            background: $anchor-color-hover;
+        }
+
+    }
+
+}
+
+/* Navigation */
+
+// mobile
+
+.off-canvas-menu-trigger {
+    padding: rem-calc(15 0);
+}
+
+.menu-button {
+    color: $white;
+    text-transform: uppercase;
+    border: 2px solid $white;
+    padding: rem-calc(10);
+}
+
+.hamburger {
+    @include hamburger($white, $white, 20px, 16px, 2px, 3);
+    transition: $transition-time;
+}
+
+.off-canvas {
+    height: 100%;
+}
+
+.right-off-canvas-menu {
+    padding: rem-calc(30 0);
+
+    a,
+    .js-off-canvas-exit {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $secondary-color-lighter-1;
+        }
+
+    }
+
+    .js-off-canvas-exit {
+        display: block;
+        position: static;
+        background: transparent;
+        line-height: 1;
+        transition: $transition-time;
+    }
+
+    .js-off-canvas-exit,
+    .menu > li > a {
+        padding: rem-calc(16 46);
+    }
+
+}
+
+// Main navigation
+
+.bottom-header-wrap {
+    background-color: $topbar-background;
+
+    .top-bar {
+
+        @include breakpoint(small only) {
+            text-align: center;
+        }
+
+    }
+
+}
+
+.top-bar {
+
+    a {
+        color: $white;
+
+        &:hover {
+            background-color: $secondary-color-lighter;
+        }
+
+    }
+
+    .active-trail > a {
+        color: $menu-item-color-active;
+        background: $secondary-color-lighter;
+    }
+
+    .dropdown.menu {
+
+        > li {
+
+            &.is-dropdown-submenu-parent {
+
+                > a:after {
+                    border-color: $secondary-color-lighter-1 transparent transparent;
+                }
+
+            }
+
+        }
+
+    }
+
+    .is-dropdown-submenu {
+        border: 0;
+        border-top: 1px solid $secondary-color-lighter;
+    }
+
+}

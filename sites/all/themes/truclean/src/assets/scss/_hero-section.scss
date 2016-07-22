@@ -1,0 +1,53 @@
+/* Hero Section */
+
+.homepage-hero,
+.errorpage-hero {
+    height: rem-calc(300);
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $grey-1;
+
+	h1 {
+		color: $white;
+		text-shadow: 1px 1px 10px $black;
+		@include absolute-center;
+	}
+
+	@include breakpoint(medium down) {
+		height: rem-calc(225);
+	}
+
+	@include small-portrait {
+		height: rem-calc(175);
+	}
+
+}
+
+.homepage-hero-bg {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='5809px' height='1000.7px' viewBox='0 0 5809 1000.7'%3E %3Cpath fill='#{$secondary-color-lighter-1-rgb}' d='M0,1000.7h1248.4L1753.7,0H0V1000.7z M4560.4,0l-499.3,1000.7H5809V0H4560.4z'/%3E %3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+
+	@include breakpoint(small down) {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='4478.1px' height='1000.7px' viewBox='0 0 4478.1 1000.7'%3E %3Cpath fill='#{$secondary-color-lighter-1-rgb}' d='M0,1000.7h1248.4L1753.7,0H0V1000.7z M3229.4,0l-499.3,1000.7h1747.9V0H3229.4z'/%3E %3C/svg%3E");
+	}
+
+}
+
+.homepage-hero-text {
+	height: 100%;
+}
+
+.homepage-hero {
+	background-image: url("#{$asset-path}/img/kitchenbg.jpg");
+}
+
+.errorpage-hero {
+	background-image: url("#{$asset-path}/img/errorbg.jpg");
+	background-size: cover;
+	background-position: center;
+}

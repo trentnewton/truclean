@@ -1,0 +1,21 @@
+name = Truclean
+description = Theme for truclean.com.au
+core = 7.x
+regions[header] = Header
+regions[search] = Search
+regions[title] = Title
+regions[main-product-categories] = Main Product Categories
+regions[content] = Content
+regions[information-menu] = Information Menu
+regions[contact-form] = Contact Form
+regions[google-map] = Google Map
+regions[footer_first-column] = Footer first column
+regions[footer_second-column] = Footer second column
+regions[footer_third-column] = Footer third column
+regions[footer_fourth-column] = Footer fourth column
+
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[bottom]         = Page bottom
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
