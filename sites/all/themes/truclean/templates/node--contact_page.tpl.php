@@ -1,7 +1,7 @@
 <?php global $user;
   // Check to see if $user has the administrator role.
   if (in_array('administrator', array_values($user->roles))) { ?>
-    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+    <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?>" <?php print $attributes; ?>>
     <?php print render($title_suffix); ?>
 <?php } ?>
 <h2>
