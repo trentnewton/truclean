@@ -142,6 +142,7 @@ sites/all/modules/jquery_update
 sites/all/modules/libraries
 sites/all/modules/link
 sites/all/modules/media
+sites/all/modules/menu_attributes
 sites/all/modules/menu_html
 sites/all/modules/menu_token
 sites/all/modules/menu_trail_by_path
@@ -150,12 +151,14 @@ sites/all/modules/multiblock
 sites/all/modules/multiform
 sites/all/modules/navbar
 sites/all/modules/navigation404
+sites/all/modules/optimizedb
 sites/all/modules/pathauto
 sites/all/modules/plupload
 sites/all/modules/prepopulate
 sites/all/modules/quickedit
 sites/all/modules/recaptcha
 sites/all/modules/redirect
+sites/all/modules/references
 sites/all/modules/rules
 sites/all/modules/security_review
 sites/all/modules/semanticviews
@@ -166,7 +169,9 @@ sites/all/modules/special_menu_items
 sites/all/modules/taxonomy_menu
 sites/all/modules/telephone
 sites/all/modules/token
+sites/all/modules/tvi
 sites/all/modules/ubercart
+sites/all/modules/uc_ajax_cart_alt
 sites/all/modules/uuid
 sites/all/modules/views_bulk_operations
 sites/all/modules/webform

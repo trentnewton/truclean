@@ -1,9 +1,5 @@
 // main styles / reset
 
-body {
-  background-color: $secondary-color;
-}
-
 a,
 a:link,
 a h1,
@@ -14,6 +10,20 @@ a h5,
 .breadcrumbs > * a,
 select {
   transition: $transition-time;
+}
+
+a h1,
+a h2,
+a h3,
+a h4,
+a h5 {
+  color: $anchor-color;
+
+  &:hover,
+  &:active {
+    color: $anchor-color-hover;
+  }
+
 }
 
 ::selection {
@@ -142,4 +152,8 @@ svg {
 
 .status {
   color: $warning-color;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

@@ -6,7 +6,13 @@
             </a>
         </div>
         <nav class="medium-6 large-6 columns">
-            
+            <?php print render($page['user_menu']); ?>
+            <?php global $user; ?>
+            <?php  if (user_is_logged_in()): ?>
+
+                <?php else : ?>
+                    <?php include ($directory."/partials/reveal-login.php"); ?>
+            <?php endif; ?>
         </nav>
         <div class="medium-6 large-3 columns">
             <?php if ($page['search']): ?>

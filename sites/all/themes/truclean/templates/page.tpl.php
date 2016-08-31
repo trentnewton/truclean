@@ -13,9 +13,7 @@
 					// Check to see if $user has the administrator role.
 					if (in_array('administrator', array_values($user->roles))) { ?>
 						<?php if ($tabs): ?>
-						<div class="tabs">
 							<?php print render($tabs); ?>
-						</div>
 						<?php endif; ?>
 						<?php print render($page['help']); ?>
 						<?php if ($action_links): ?>

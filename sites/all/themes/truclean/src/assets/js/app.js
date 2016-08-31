@@ -76,4 +76,9 @@
     return false;
   });
 
+  // adding module attribute to login link
+
+  $('#reveal-login').attr({'data-open': 'login', 'href': '#'});
+
+
 })(jQuery);

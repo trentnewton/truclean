@@ -47,32 +47,78 @@ th.active {
   height: initial;
 }
 
-ul.primary {
-  border-bottom: 1px solid #bbb;
-  border-collapse: collapse;
-  height: auto;
-  line-height: normal;
-  list-style: none;
-  margin: 5px;
-  padding: 0 0 0 1em;
-  /* LTR */
-  white-space: nowrap;
+// ul.primary {
+//   border-bottom: 1px solid #bbb;
+//   border-collapse: collapse;
+//   height: auto;
+//   line-height: normal;
+//   list-style: none;
+//   margin: 5px;
+//   padding: 0 0 0 1em;
+//   /* LTR */
+//   white-space: nowrap;
 
-    li {
-        display: inline;
+//     li {
+//         display: inline;
 
-        a {
-            background-color: #ddd;
-            border-color: #bbb;
-            border-style: solid solid none solid;
-            border-width: 1px;
-            height: auto;
-            margin-right: 0.5em;
-            /* LTR */
-            padding: 0 1em;
-            text-decoration: none;
+//         a {
+//             background-color: #ddd;
+//             border-color: #bbb;
+//             border-style: solid solid none solid;
+//             border-width: 1px;
+//             height: auto;
+//             margin-right: 0.5em;
+//             /* LTR */
+//             padding: 0 1em;
+//             text-decoration: none;
+//         }
+
+//     }
+
+// }
+
+ul.tabs {
+  margin-bottom: $paragraph-margin-bottom;
+
+  > li {
+    @extend .tabs-title;
+
+    &.active {
+      @extend .is-active;
+    }
+
+  }
+
+  &.primary {
+
+    > li {
+
+      > a {
+
+        &:hover,
+        &:focus {
+          background: $anchor-color-hover;
         }
 
+      }
+
+      &.active,
+      &.is-active {
+
+        > a {
+          background: $primary-color-lighter;
+
+          &:hover,
+          &:focus {
+            background: $anchor-color-hover;
+          }
+
+        }
+
+      }
+
     }
+
+  }
 
 }

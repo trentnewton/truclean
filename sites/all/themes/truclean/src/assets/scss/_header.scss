@@ -215,6 +215,11 @@
 
     }
 
+    .active-trail > a {
+        color: $menu-item-color-active;
+        background: $menu-item-background-active;
+    }
+
     .js-off-canvas-exit {
         display: block;
         position: static;

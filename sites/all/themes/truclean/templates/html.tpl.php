@@ -29,5 +29,6 @@
 		<?php print $page; ?>
 		<?php print $scripts; ?>
 		<?php print $page_bottom; ?>
+		<div class="bg-page-footer"></div>
 	</body>
 </html>

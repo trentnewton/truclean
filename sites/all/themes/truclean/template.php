@@ -20,15 +20,6 @@ function truclean_process_html(&$vars) {
   $vars['head_scripts'] = drupal_get_js('head_scripts');
 }
 
-// Remove Drupal core css
-
-function truclean_css_alter(&$css) {
-  unset($css[drupal_get_path('module','system').'/system.theme.css']);
-  unset($css[drupal_get_path('module','system').'/system.messages.css']);
-  unset($css[drupal_get_path('module','system').'/system.menus.css']);
-  unset($css[drupal_get_path('module','search').'/search.css']);
-}
-
 function truclean_js_alter(&$js) {
 
   // Remove Drupal core js
@@ -62,6 +53,20 @@ function truclean_js_alter(&$js) {
 
   $js = array_diff_key($js, $exclude);
 
+}
+
+function truclean_menu_tree($variables) {
+
+  if (preg_match("/\bmenu\b/i", $variables['tree'])){
+   return '<ul class="menu dropdown top-header-menu first-menu" data-dropdown-menu>' . $variables['tree']    . '</ul>';
+  } else {
+    return '<ul class="menu">' . $variables['tree'] . '</ul>';
+  }
+
+}
+
+function truclean_menu_tree__menu_login_menu($variables) {
+  return '<ul class="menu top-header-menu first-menu">' . $variables['tree'] . '</ul>';
 }
 
 // adding content type template overide

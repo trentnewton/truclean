@@ -13,9 +13,7 @@
 				<?php if ($tabs): ?>
 				<section class="admin-links">
 					<div class="row column">
-						<div class="tabs">
-							<?php print render($tabs); ?>
-						</div>
+						<?php print render($tabs); ?>
 					</div>
 				</section>
 				<?php endif; ?>

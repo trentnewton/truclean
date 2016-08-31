@@ -2,6 +2,7 @@ name = Truclean
 description = Theme for truclean.com.au
 core = 7.x
 regions[header] = Header
+regions[user_menu] = User Menu
 regions[search] = Search
 regions[title] = Title
 regions[main-product-categories] = Main Product Categories
@@ -19,3 +20,23 @@ regions[help]           = Help
 regions[bottom]         = Page bottom
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
+
+stylesheets[all][] = system.base.css
+stylesheets[all][] = system.theme.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = search.css
+
+stylesheets[all][] = date.css
+stylesheets[all][] = field.css
+stylesheets[all][] = node.css
+stylesheets[all][] = user.css
+stylesheets[all][] = views.css
+
+stylesheets[all][] = ctools.css
+stylesheets[all][] = custom_search.css
+stylesheets[all][] = webform.css
+
+stylesheets[all][] = uc_product.css
+stylesheets[all][] = uc_store.css
+stylesheets[all][] = uc_order.css

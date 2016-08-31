@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 @import 'webfonts';
+@import 'variables';
 @import 'settings';
 @import 'global';
 @import 'foundation';
@@ -37,7 +38,7 @@
 // @include foundation-slider;
 // @include foundation-sticky;
 @include foundation-reveal;
-@include foundation-switch;
+// @include foundation-switch;
 @include foundation-table;
 @include foundation-tabs;
 // @include foundation-thumbnail;
@@ -61,4 +62,5 @@
 @import 'hero-section';
 @import 'page';
 @import 'products';
+@import 'cart';
 @import 'footer';

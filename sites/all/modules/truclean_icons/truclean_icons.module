@@ -90,6 +90,10 @@ function truclean_icons_token_info() {
     'name' => t('PDF Document Icon'),
     'description' => t('A PDF document icon'),
   );
+  $info['tokens']['icon']['icon-user'] = array(
+    'name' => t('User Icon'),
+    'description' => t('A user icon'),
+  );
   $info['tokens']['icon']['icon-aid-kit'] = array(
     'name' => t('PDF Document Icon'),
     'description' => t('A PDF document icon'),
@@ -187,6 +191,10 @@ function truclean_icons_tokens($type, $tokens, array $data = array(), array $opt
         case 'icon-file-pdf':
           // Give our token it's value!
           $replacements[$original] = '<svg class="icon icon-file-pdf"><use xlink:href="#icon-file-pdf"></use></svg>';
+          break;
+          case 'icon-user':
+          // Give our token it's value!
+          $replacements[$original] = '<svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>';
           break;
         case 'icon-aid-kit':
           // Give our token it's value!

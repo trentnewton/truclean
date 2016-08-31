@@ -34,17 +34,178 @@
 
 }
 
-.category {
+.view-product-terms,
+.view-product-list {
 
-	h2,
-	.row div {
+	h2 {
 		margin-bottom: rem-calc(25);
 	}
 
-	img {
-		margin-bottom: rem-calc(10);
+	figure {
+		transition: $transition-time;
+		margin-bottom: rem-calc(20);
+
+		img {
+			margin: 0;
+		}
+
 	}
 
+	a {
+
+		p {
+			color: $body-font-color;
+			margin-bottom: $paragraph-margin-bottom;
+		}
+
+		&:hover,
+		&:active {
+
+			figure {
+				opacity: 0.5;
+			}
+
+			h4 {
+				color: $anchor-color-hover;
+			}
+
+		}
+
+	}
+
+}
+
+.view-content {
+
+	> ul {
+		@extend .no-bullet;
+	}
+
+}
+
+.node-type-product .normal-page-content,
+.view-product-list {
+
+	img {
+		border: 1px solid $dark-gray;
+	}
+
+}
+
+.svg-category-image {
+	fill: $black;
+}
+
+.Air-Fresheners-bg {
+	background: #e3e545;
+}
+
+.Bathroom-Products-bg {
+	background: #099848;
+}
+
+.Beerline-Cleaners-bg {
+	background: #f37e20;
+}
+
+.Disinfectants-and-Hygiene-bg {
+	background: #96c93e;
+}
+
+.Floor-Care-Spray-and-Wipe-bg {
+	background: #e36eaa;
+}
+
+.Hand-Cleaners-bg {
+	background: #5590cc;
+}
+
+.Industrial-Products-bg {
+	background: #b0afb0;
+}
+
+.Kitchen-Hygiene-bg {
+	background: #ec2426;
+}
+
+.Laundry-Products-bg {
+	background: #a1479b;
+}
+
+.Window-Cleaner-Spray-and-Wipe-bg {
+	background: #536da1;
+}
+
+.Also-Available-bg {
+	background: #ad1f30;
+}
+
+.Coffee-Culture-bg {
+	background: #dddddd;
+}
+
+.Brooms-and-Handles-bg {
+	background: #3bb54c;
+}
+
+.Buckets-bg {
+	background: #99258f;
+}
+
+.Dustpans-and-Brushes-bg {
+	background: #f9f180;
+}
+
+.Floor-Pads-bg {
+	background: #f8a47b;
+}
+
+.Floor-Squeegees-bg {
+	background: #f5841f;
+}
+
+.Janitorial-and-Safety-bg {
+	background: #3a75bb;
+}
+
+.Mops-bg {
+	background: #39c0f0;
+}
+
+.Scrubs-bg {
+	background: #ce7eb5;
+}
+
+.Window-Washers-bg {
+	background: #39a28a;
+}
+
+.Wipes-Cloths-Sponges-and-Scours-bg {
+	background: #8b6fb1;
+}
+
+.Bin-Liners-and-Garbage-Bags-bg {
+	background: #ef435c;
+}
+
+.Facial-Tissues-bg {
+	background: #3d68b2;
+}
+
+.Gloves-bg {
+	background: #54b948;
+}
+
+.Hand-Towels-bg {
+	background: #a9d8f4;
+}
+
+.Soap-and-Dispensers-bg {
+	background: #febc17;
+}
+
+.Toilet-Paper-bg {
+	background: #d4b1d4;
 }
 
 .description {
@@ -72,4 +233,8 @@ a.sds {
 
 input.qty {
 	width: rem-calc(50);
+}
+
+.related-items {
+	margin-top: rem-calc(60);
 }
