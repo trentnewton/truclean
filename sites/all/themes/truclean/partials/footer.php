@@ -2,18 +2,18 @@
 	<div class="top-footer">
 		<div class="row">
 			<div class="small-6 medium-3 large-3 columns">
-			<?php if ($page['footer_first-column']): ?>
-				<?php print render($page['footer_first-column']); ?>
+			<?php if ($page['footer_first_column']): ?>
+				<?php print render($page['footer_first_column']); ?>
         	<?php endif; ?>
 			</div>
 			<div class="small-6 medium-3 large-3 columns">
-			<?php if ($page['footer_second-column']): ?>
-				<?php print render($page['footer_second-column']); ?>
+			<?php if ($page['footer_second_column']): ?>
+				<?php print render($page['footer_second_column']); ?>
         	<?php endif; ?>
 			</div>
 			<div class="medium-3 large-3 columns">
-			<?php if ($page['footer_third-column']): ?>
-				<?php print render($page['footer_third-column']); ?>
+			<?php if ($page['footer_third_column']): ?>
+				<?php print render($page['footer_third_column']); ?>
         	<?php endif; ?>
 			</div>
 			<div class="medium-3 large-3 columns">

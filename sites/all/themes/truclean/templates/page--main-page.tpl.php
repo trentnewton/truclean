@@ -1,12 +1,17 @@
 <div class="off-canvas-wrapper">
 	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 		<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-			<?php include ($directory."/partials/off-canvas-menu.php"); ?>
+			<?php include ($directory."/partials/off_canvas_menu.php"); ?>
 		</div>
 		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
 			<?php include ($directory."/partials/header.php"); ?>
-			<?php include ($directory."/partials/title-header.php"); ?>
-			<?php include ($directory."/partials/main-product-categories.php"); ?>
+			<?php include ($directory."/partials/title_header.php"); ?>
+			<?php include ($directory."/partials/main_product_categories.php"); ?>
+			<?php if ($messages): ?>
+			<div class="row column">
+				<?php print $messages; ?>
+			</div>
+			<?php endif; ?>
 			<?php global $user;
 			// Check to see if $user has the administrator role.
 			if (in_array('administrator', array_values($user->roles))) { ?>

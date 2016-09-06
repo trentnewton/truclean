@@ -1,15 +1,20 @@
 <div class="off-canvas-wrapper">
 	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 		<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-			<?php include ($directory."/partials/off-canvas-menu.php"); ?>
+			<?php include ($directory."/partials/off_canvas_menu.php"); ?>
 		</div>
 		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
 			<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				<?php include ($directory."/partials/header.php"); ?>
-				<?php include ($directory."/partials/title-header.php"); ?>
+				<?php include ($directory."/partials/title_header.php"); ?>
 			</header>
-			<?php include ($directory."/partials/main-product-categories.php"); ?>
+			<?php include ($directory."/partials/main_product_categories.php"); ?>
 			<main class="normal-page-content" id="main-content" itemscope itemprop="mainContentOfPage">
+				<?php if ($messages): ?>
+				<div class="row column">
+					<?php print $messages; ?>
+				</div>
+				<?php endif; ?>
 				<?php global $user;
 				// Check to see if $user has the administrator role.
 				if (in_array('administrator', array_values($user->roles))) { ?>
@@ -30,9 +35,9 @@
 						<?php print render($page['content']); ?>
 					</div>
 					<div class="medium-3 medium-pull-9 columns">
-						<?php if ($page['information-menu']): ?>
+						<?php if ($page['information_menu']): ?>
 						<h3><?php print t('Information') ?></h3>
-						<?php print render($page['information-menu']); ?>
+						<?php print render($page['information_menu']); ?>
 						<?php endif; ?>
 					</div>
 				</div>

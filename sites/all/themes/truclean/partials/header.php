@@ -94,7 +94,7 @@
             <?php  if (user_is_logged_in()): ?>
 
                 <?php else : ?>
-                    <?php include ($directory."/partials/reveal-login.php"); ?>
+                    <?php include ($directory."/partials/reveal_login.php"); ?>
             <?php endif; ?>
         </nav>
         <div class="medium-5 large-3 columns">

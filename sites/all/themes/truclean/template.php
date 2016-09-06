@@ -55,20 +55,6 @@ function truclean_js_alter(&$js) {
 
 }
 
-function truclean_menu_tree($variables) {
-
-  if (preg_match("/\bmenu\b/i", $variables['tree'])){
-   return '<ul class="menu dropdown top-header-menu first-menu" data-dropdown-menu>' . $variables['tree']    . '</ul>';
-  } else {
-    return '<ul class="menu">' . $variables['tree'] . '</ul>';
-  }
-
-}
-
-function truclean_menu_tree__menu_login_menu($variables) {
-  return '<ul class="menu top-header-menu first-menu">' . $variables['tree'] . '</ul>';
-}
-
 // adding content type template overide
 
 function truclean_preprocess_page(&$vars, $hook) {
@@ -147,6 +133,26 @@ function truclean_form($variables) {
   }
   // Anonymous DIV to satisfy XHTML compliance. (REMOVED)
   return '<form' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</form>';
+}
+
+function truclean_menu_tree($variables) {
+
+  if (preg_match("/\bmenu\b/i", $variables['tree'])){
+   return '<ul class="menu dropdown top-header-menu first-menu" data-dropdown-menu>' . $variables['tree']    . '</ul>';
+  } else {
+    return '<ul class="menu">' . $variables['tree'] . '</ul>';
+  }
+
+}
+
+function truclean_menu_tree__menu_login_menu($variables) {
+  return '<ul class="menu top-header-menu first-menu">' . $variables['tree'] . '</ul>';
+}
+
+// information menu
+
+function truclean_menu_tree__menu_info_menu($variables){
+  return "<ul class=\"menu vertical information-menu\">\n" . $variables['tree'] ."</ul>\n";
 }
 
 function truclean_form_alter(&$form, &$form_state, $form_id) {
@@ -252,19 +258,6 @@ function truclean_form_user_login_ajax($form, $form_state) {
 
 // breadcrumbs
 
-function truclean_preprocess_breadcrumb(&$variables) {
-  $all = array();
-  foreach ($variables['breadcrumb'] as $key=>$item) {
-    if (preg_match('|href="(.*)"|Ui', $item, $matches)) {
-      if (isset($all[$matches[1]])) {
-        unset($variables['breadcrumb'][$key]);
-      } else {
-        $all[$matches[1]] = 1;
-      }
-    }
-  }
-}
-
 function truclean_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   $crumbs = '';
@@ -286,16 +279,10 @@ function truclean_breadcrumb($variables) {
   return $crumbs;
 }
 
-// information menu
-
-function truclean_menu_tree__menu_info_menu($variables){
-  return "<ul class=\"menu vertical information-menu\">\n" . $variables['tree'] ."</ul>\n";
-}
-
 function truclean_block_view_user_login_alter(&$data, $block) {
   global $user;
   if (!$user->uid && !(arg(0) == 'user' && (arg(1) == 'login'))) {
         $block->subject = t('User login');
         $block->content = drupal_get_form('user_login_block');
-    }
+  }
 }
