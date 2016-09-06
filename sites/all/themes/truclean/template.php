@@ -168,7 +168,7 @@ function truclean_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'search_form') {
     $form['#attributes']['class'][] = 'search-form-custom';
     $form['basic']['keys']['#theme_wrappers'] = array();
-    $form['basic']['keys']['#prefix'] = '<div class="row"><div class="medium-9 large-9 medium-push-3 columns"><div class="row"><div class="medium-9 large-10 columns">';
+    $form['basic']['keys']['#prefix'] = '<div class="row"><div class="medium-9 large-9 medium-push-3 columns search-form-inputs"><div class="row"><div class="medium-9 large-10 columns">';
     $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
     $form['basic']['keys']['#suffix'] = '</div>';
     $form['basic']['submit'] = array
@@ -189,9 +189,81 @@ function truclean_form_alter(&$form, &$form_state, $form_id) {
     unset($form['advanced']['type']['#title']);
   }
 
+  if ($form_id == 'user_pass') {
+    $form['actions']['submit'] = array
+    (
+      '#prefix' => '<button type="submit" name="op" class="button" id="edit-submit">' . t('Email new password') . '</button>',
+      '#type' => 'submit',
+      '#attributes' => array( 'class' => array( 'hide' )),
+    );
+  }
+
+  if ($form_id == 'user_pass_reset') {
+    $form['actions']['submit'] = array
+    (
+      '#prefix' => '<button type="submit" name="op" class="button" id="edit-submit">' . t('Log in') . '</button>',
+      '#type' => 'submit',
+      '#attributes' => array( 'class' => array( 'hide' )),
+    );
+  }
+
+  if (in_array($form_id, array('user_login', 'user_login_block'))) {
+    $form['name']['#attributes'] = array
+    (
+      'placeholder' => t('Enter your username'),
+      'required' => 'required',
+    );
+    $form['pass']['#attributes'] = array
+    (
+      'placeholder' => t('Enter your password'),
+      'required' => 'required',
+    );
+    $form['actions']['submit'] = array
+    (
+      '#prefix' => '<button type="submit" name="op" class="button" id="edit-submit">' . t('Log in') . '</button>',
+      '#type' => 'submit',
+      '#attributes' => array( 'class' => array( 'hide' )), // hide the input field
+    );
+
+    // Turn it into an AJAX element.
+    $form['actions']['submit']['#ajax'] = array(
+      'wrapper' => $form['#id'],
+      'callback' => 'truclean_form_user_login_ajax',
+      'progress' => array
+      (
+        'type' => 'throbber',
+        'message' => t('Logging in'),
+      ),
+      'event' => 'click',
+    );
+  }
+
+}
+
+function truclean_form_user_login_ajax($form, $form_state) {
+  global $user;
+  if ($user->uid) {
+    return '<div class="reload-overlay"></div><div class="messages status">' . t('Successfully logged in.') . '</div>';
+  }
+  else {
+    return $form;
+  }
 }
 
 // breadcrumbs
+
+function truclean_preprocess_breadcrumb(&$variables) {
+  $all = array();
+  foreach ($variables['breadcrumb'] as $key=>$item) {
+    if (preg_match('|href="(.*)"|Ui', $item, $matches)) {
+      if (isset($all[$matches[1]])) {
+        unset($variables['breadcrumb'][$key]);
+      } else {
+        $all[$matches[1]] = 1;
+      }
+    }
+  }
+}
 
 function truclean_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
@@ -218,4 +290,12 @@ function truclean_breadcrumb($variables) {
 
 function truclean_menu_tree__menu_info_menu($variables){
   return "<ul class=\"menu vertical information-menu\">\n" . $variables['tree'] ."</ul>\n";
+}
+
+function truclean_block_view_user_login_alter(&$data, $block) {
+  global $user;
+  if (!$user->uid && !(arg(0) == 'user' && (arg(1) == 'login'))) {
+        $block->subject = t('User login');
+        $block->content = drupal_get_form('user_login_block');
+    }
 }

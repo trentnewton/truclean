@@ -1,5 +1,15 @@
-.logo-slogan {
+#slogan,
+#logo-icon {
 	fill: $primary-color;
+}
+
+#wordmark,
+#logo-icon,
+#slogan {
+	transition: $transition-time;
+    transition-timing-function: ease-in-out;
+    -webkit-transition: $transition-time;
+    -webkit-transition-timing-function: ease-in-out;
 }
 
 .mastercard-left,
@@ -8,7 +18,7 @@
 	fill: #758DC6;
 }
 
-.wordmark,
+#wordmark,
 .mastercard-right,
 .pay,
 .visa {

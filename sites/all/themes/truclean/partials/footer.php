@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="top-footer">
 		<div class="row">
 			<div class="small-6 medium-3 large-3 columns">

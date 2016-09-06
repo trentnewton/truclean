@@ -3,23 +3,25 @@
 		<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
 			<?php include ($directory."/partials/off-canvas-menu.php"); ?>
 		</div>
-		<div class="off-canvas-content" data-off-canvas-content>
-			<?php include ($directory."/partials/header.php"); ?>
-			<div class="errorpage-hero">
+		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
+			<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+				<?php include ($directory."/partials/header.php"); ?>
+			</header>
+			<section class="errorpage-hero">
 				<div class="homepage-hero-bg">
 					<div class="row medium-12 large-12 columns homepage-hero-text">
 						<?php print render($title_prefix); ?>
 						<?php if ($title): ?>
-						<h1>
+						<h1 itemprop="headline">
 							<?php print $title; ?>
 						</h1>
 						<?php endif; ?>
 						<?php print render($title_suffix); ?>
 					</div>
 				</div>
-			</div>
+			</section>
 			<?php include ($directory."/partials/main-product-categories.php"); ?>
-			<section class="normal-page-content">
+			<main class="normal-page-content" id="main-content" itemscope itemprop="mainContentOfPage">
 				<div class="row column">
 					<?php global $user;
 					// Check to see if $user has the administrator role.
@@ -38,7 +40,7 @@
 					<?php print render($page['content']); ?>
 					<p><?php print t('Try checking the url for errors and refreshing the page in your browser. For more help, please feel free to'); ?>&nbsp;<a href="<?php print $base_path; ?>contact/"><?php print t('contact us.'); ?></a></p>
 				</div>
-			</section>
+			</main>
 			<?php include ($directory."/partials/footer.php"); ?>
 			<div class="js-off-canvas-exit"></div>
 		</div>

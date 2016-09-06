@@ -3,7 +3,7 @@
 		<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
 			<?php include ($directory."/partials/off-canvas-menu.php"); ?>
 		</div>
-		<div class="off-canvas-content" data-off-canvas-content>
+		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
 			<?php include ($directory."/partials/header.php"); ?>
 			<?php include ($directory."/partials/title-header.php"); ?>
 			<?php include ($directory."/partials/main-product-categories.php"); ?>
@@ -11,11 +11,11 @@
 			// Check to see if $user has the administrator role.
 			if (in_array('administrator', array_values($user->roles))) { ?>
 				<?php if ($tabs): ?>
-				<section class="admin-links">
+				<div class="admin-links">
 					<div class="row column">
 						<?php print render($tabs); ?>
 					</div>
-				</section>
+				</div>
 				<?php endif; ?>
 				<?php print render($page['help']); ?>
 				<?php if ($action_links): ?>
@@ -24,7 +24,9 @@
 				</ul>
 				<?php endif; ?>
 			<?php } ?>
-			<?php print render($page['content']); ?>
+			<main id="main-content" itemscope itemprop="mainContentOfPage">
+				<?php print render($page['content']); ?>
+			</main>
 			<?php include ($directory."/partials/footer.php"); ?>
 			<div class="js-off-canvas-exit"></div>
 		</div>

@@ -47,78 +47,73 @@ th.active {
   height: initial;
 }
 
-// ul.primary {
-//   border-bottom: 1px solid #bbb;
-//   border-collapse: collapse;
-//   height: auto;
-//   line-height: normal;
-//   list-style: none;
-//   margin: 5px;
-//   padding: 0 0 0 1em;
-//   /* LTR */
-//   white-space: nowrap;
-
-//     li {
-//         display: inline;
-
-//         a {
-//             background-color: #ddd;
-//             border-color: #bbb;
-//             border-style: solid solid none solid;
-//             border-width: 1px;
-//             height: auto;
-//             margin-right: 0.5em;
-//             /* LTR */
-//             padding: 0 1em;
-//             text-decoration: none;
-//         }
-
-//     }
-
-// }
-
-ul.tabs {
+ul.tabs,
+ul.tabs.primary {
   margin-bottom: $paragraph-margin-bottom;
+  background: $tab-background;
 
   > li {
     @extend .tabs-title;
 
     &.active {
       @extend .is-active;
-    }
-
-  }
-
-  &.primary {
-
-    > li {
 
       > a {
+        color: $white;
+        background: $tab-background-active;
 
         &:hover,
         &:focus {
+          color: $white;
           background: $anchor-color-hover;
         }
 
       }
 
-      &.active,
-      &.is-active {
+    }
 
-        > a {
-          background: $primary-color-lighter;
+    > a {
+      color: $anchor-color;
 
-          &:hover,
-          &:focus {
-            background: $anchor-color-hover;
-          }
-
-        }
-
+      &:hover,
+      &:focus {
+        color: $anchor-color-hover;
+        background: $tab-item-background-hover;
       }
 
     }
 
   }
 
+}
+
+.messages {
+  @extend .callout;
+
+  &.error {
+    @extend .callout.alert;
+  }
+
+  &.status,
+  &.webform-confirmation {
+    @extend .callout.success;
+  }
+
+  &.warning {
+    @extend .callout.warning;
+  }
+
+}
+
+.error {
+  color: $alert-color;
+}
+
+.status,
+.webform-confirmation {
+  color: $success-color;
+}
+
+.warning {
+  color: $warning-color;
 }

@@ -30,7 +30,7 @@ if (isset($form['preview_message'])) {
 
     <input type="hidden" name="form_id" value="webform_client_form_64">
     <input type="hidden" name="webform_ajax_wrapper_id" value="webform-ajax-wrapper-64">
-    <button class="button" type="submit" id="edit-webform-ajax-submit-64" name="op" value="Send">Send</button>
+    <button class="button" type="submit" id="edit-webform-ajax-submit-64" name="op"><?php print t('Send');?></button>
     <?php print drupal_render($form['captcha']); ?>
     <div class="hide">
     	<?php print drupal_render($form['actions']['submit']); ?>

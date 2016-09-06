@@ -3,11 +3,13 @@
 		<div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
 			<?php include ($directory."/partials/off-canvas-menu.php"); ?>
 		</div>
-		<div class="off-canvas-content" data-off-canvas-content>
-			<?php include ($directory."/partials/header.php"); ?>
-			<?php include ($directory."/partials/title-header.php"); ?>
+		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
+			<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+				<?php include ($directory."/partials/header.php"); ?>
+				<?php include ($directory."/partials/title-header.php"); ?>
+			</header>
 			<?php include ($directory."/partials/main-product-categories.php"); ?>
-			<section class="normal-page-content">
+			<main class="normal-page-content" id="main-content" itemscope itemprop="mainContentOfPage">
 				<?php global $user;
 				// Check to see if $user has the administrator role.
 				if (in_array('administrator', array_values($user->roles))) { ?>
@@ -29,17 +31,20 @@
 					</div>
 					<div class="medium-9 columns">
 						<hr class="show-for-small-only">
+						<?php if ($messages): ?>
+			            	<?php print $messages; ?>
+						<?php endif; ?>
 						<?php if ($page['contact-form']): ?>
-						<?php print render($page['contact-form']); ?>
+							<?php print render($page['contact-form']); ?>
 						<?php endif; ?>
 					</div>
 				</div>
-			</section>
+			</main>
 			<?php if ($page['google-map']): ?>
-			<section class="google-map">
+			<aside class="google-map">
 				<?php print render($page['google-map']); ?>
 				<div class="google-map-overlay"></div>
-			</section>
+			</aside>
 			<?php endif; ?>
 			<?php include ($directory."/partials/footer.php"); ?>
 			<div class="js-off-canvas-exit"></div>

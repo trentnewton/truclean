@@ -29,32 +29,20 @@
 	display: inline-block;
 }
 
-// .logged-in {
+.not-logged-in {
 
-// 	.form-required {
-// 		@extend .error;
-// 	}
+	.attribute .form-required,
+	.form-checkbox,
+	.node-add-to-cart.form-submit {
+		display: none;
+	}
 
-// }
+	[type='checkbox'] + label[for],
+	[type='radio'] + label[for] {
+		cursor: default;
+	}
 
-.form-required {
-	@extend .error;
 }
-
-// .not-logged-in {
-
-// 	.form-required,
-// 	.form-checkbox,
-// 	.node-add-to-cart.form-submit {
-// 		display: none;
-// 	}
-
-// 	[type='checkbox'] + label[for],
-// 	[type='radio'] + label[for] {
-// 		cursor: default;
-// 	}
-
-// }
 
 #uc-cart-view-form {
 

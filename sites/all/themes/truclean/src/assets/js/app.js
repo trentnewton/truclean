@@ -54,22 +54,11 @@
     });
   });
 
-  // function buttonUp(){
-  //   var inputVal = $('.search-box-input').val();
-  //   inputVal = $.trim(inputVal).length;
-  //   if( inputVal !== 0){
-  //     $('.search-box-icon').css('display','none');
-  //   } else {
-  //     $('.search-box-input').val('');
-  //     $('.search-box-icon').css('display','block');
-  //   }
-  // }
-
   // wrap tables with overflow auto
 
   $('table').wrap('<div class="overflow-auto" />');
 
-  // hide maps overlay when clicked gay
+  // hide maps overlay when clicked
 
   $('.google-map-overlay').on('click', function() {
     $(this).toggleClass('hide');
@@ -78,7 +67,36 @@
 
   // adding module attribute to login link
 
-  $('#reveal-login').attr({'data-open': 'login', 'href': '#'});
+  $('#reveal-login').removeAttr('href').attr({'data-open': 'login'});
 
+  $('#login').on('click', '.reload-overlay', function() {
+    location.reload(true);
+  });
+
+  // reshuffle search results under the search form grid
+
+  $('.search-form-inputs').append($('.search-results-list'));
+
+  // add closable attribute to messages
+
+  $('.messages').attr({'data-closable': 'slide-out-right'});
+  $('<button class="close-button" aria-label="Dismiss alert" type="button" data-close><span aria-hidden="true">&times;</span></button>').appendTo('.messages');
+
+  /**
+   * Recaptcha bug fix with ajax rendering form.
+   */
+  Drupal.behaviors.recapcha_ajax_behaviour = {
+    attach: function(context, settings) {
+      if (typeof grecaptcha != "undefined") {
+        var captchas = document.getElementsByClassName('g-recaptcha');
+        for (var i = 0; i < captchas.length; i++) {
+          var site_key = captchas[i].getAttribute('data-sitekey');
+          if (!$(captchas[i]).html()) {
+            grecaptcha.render(captchas[i], { 'sitekey' : site_key});
+          }
+        }
+      }
+    }
+  }
 
 })(jQuery);

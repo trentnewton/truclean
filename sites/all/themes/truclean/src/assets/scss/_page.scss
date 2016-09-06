@@ -52,7 +52,29 @@
     padding: rem-calc(50 0);
 }
 
-div.normal-page-content {
+.normal-page-content {
+
+    img {
+        margin-bottom: rem-calc(20);
+        width: 100%;
+        height: auto;
+    }
+
+    .information-menu {
+
+        li {
+
+            a {
+
+                &:hover {
+                    background: $primary-color-lighter-4;
+                }
+
+            }
+
+        }
+
+    }
 
     &:nth-of-type(even) {
         background: $primary-color-lighter-5;
@@ -60,12 +82,15 @@ div.normal-page-content {
 
 }
 
-.normal-page-content {
+.normal-page-content .information-menu,
+.region-information-menu {
 
-    img {
-        margin-bottom: rem-calc(20);
-        width: 100%;
-        height: auto;
+    .active-trail {
+
+        a {
+            color: $anchor-color-hover;
+        }
+
     }
 
 }
@@ -77,14 +102,6 @@ div.normal-page-content {
         &:hover,
         &:focus {
             background: rgba($light-gray, 0.5);
-        }
-
-    }
-
-    .active-trail {
-
-        a {
-            color: $anchor-color-hover;
         }
 
     }
@@ -118,7 +135,25 @@ div.normal-page-content {
     cursor: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16' viewBox='0 0 16 16'%3E %3Cpath fill='#{$black-rgb}' d='M12 1c1.654 0 3 1.346 3 3v3h-2v-3c0-0.551-0.449-1-1-1h-2c-0.551 0-1 0.449-1 1v3h0.25c0.412 0 0.75 0.338 0.75 0.75v7.5c0 0.412-0.338 0.75-0.75 0.75h-8.5c-0.412 0-0.75-0.338-0.75-0.75v-7.5c0-0.412 0.338-0.75 0.75-0.75h6.25v-3c0-1.654 1.346-3 3-3h2z'%3E%3C/path%3E %3C/svg%3E"), auto;
 }
 
+// Downloads page
+
+.view-download-terms {
+    @extend .view-product-terms, .view-product-list;
+}
+
+.Safety-Data-Sheets-bg {
+    background: #a5356d;
+}
+
+.Product-Data-Sheets-bg {
+    background: #30b592;
+}
+
 // Search results page
+
+.search-results-list {
+    margin-top: rem-calc(50);
+}
 
 .search-results {
 
@@ -127,7 +162,30 @@ div.normal-page-content {
     }
 
     p {
-        margin-bottom: 1rem;
+        margin-bottom: $paragraph-margin-bottom;
     }
 
+}
+
+// Pagination
+
+ul.pager {
+    margin-top: rem-calc(30);
+    text-align: center;
+    @extend .pagination;
+
+    a,
+    button {
+
+        &:hover,
+        &:focus {
+            color: $anchor-color-hover;
+        }
+
+    }
+
+}
+
+li.pager-current {
+    @extend .current;
 }

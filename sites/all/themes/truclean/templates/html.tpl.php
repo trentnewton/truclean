@@ -4,12 +4,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="HandheldFriendly" content="true">
 	<title><?php print $head_title; ?></title>
-	<meta name="application-name" content="<?php print $site_name; ?>">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/icon-270x270.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/manifest.json">
+	<link rel="mask-icon" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/safari-pinned-tab.svg" color="#286bb3">
 	<meta name="theme-color" content="#ffffff">
-	<link rel="icon" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/icon-192x192.png" sizes="192x192">
-	<link rel="apple-touch-icon-precomposed" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/icon-180x180.png">
 	<?php print $head; ?>
 	<?php
 		global $user;

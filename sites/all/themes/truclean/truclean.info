@@ -3,6 +3,7 @@ description = Theme for truclean.com.au
 core = 7.x
 regions[header] = Header
 regions[user_menu] = User Menu
+regions[login_form] = Login Form
 regions[search] = Search
 regions[title] = Title
 regions[main-product-categories] = Main Product Categories

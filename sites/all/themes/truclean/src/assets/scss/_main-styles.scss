@@ -142,18 +142,16 @@ svg {
   width: 100%;
 }
 
-.error {
-  color: $alert-color;
-}
-
-.webform-confirmation {
-  color: $success-color;
-}
-
-.status {
-  color: $warning-color;
-}
-
 .nowrap {
   white-space: nowrap;
+}
+
+.reload-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1007;
 }

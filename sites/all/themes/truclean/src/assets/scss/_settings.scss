@@ -238,7 +238,7 @@ $breadcrumbs-item-slash: true;
 // ----------
 
 $button-padding: 0.85em 1em;
-$button-margin: 0 0 $global-margin 0;
+$button-margin: $global-margin 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: $anchor-color-hover;
@@ -430,11 +430,11 @@ $orbit-control-zindex: 10;
 
 $pagination-font-size: rem-calc(14);
 $pagination-margin-bottom: $global-margin;
-$pagination-item-color: $black;
+$pagination-item-color: $primary-color;
 $pagination-item-padding: rem-calc(3 10);
 $pagination-item-spacing: rem-calc(1);
 $pagination-radius: $global-radius;
-$pagination-item-background-hover: $light-gray;
+$pagination-item-background-hover: $primary-color-lighter-4;
 $pagination-item-background-current: $primary-color;
 $pagination-item-color-current: foreground($pagination-item-background-current);
 $pagination-item-color-disabled: $medium-gray;
@@ -515,13 +515,13 @@ $show-header-for-stacked: false;
 
 $tab-margin: 0;
 $tab-background: $white;
-$tab-background-active: $light-gray;
+$tab-background-active: $primary-color;
 $tab-item-font-size: rem-calc(12);
-$tab-item-background-hover: $white;
+$tab-item-background-hover: $primary-color-lighter-4;
 $tab-item-padding: 1.25rem 1.5rem;
 $tab-expand-max: 6;
 $tab-content-background: $white;
-$tab-content-border: $light-gray;
+$tab-content-border: $primary-color;
 $tab-content-color: foreground($tab-background, $primary-color);
 $tab-content-padding: 1rem;
 

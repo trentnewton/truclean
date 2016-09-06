@@ -1,4 +1,4 @@
-<header class="main-header">
+<div class="main-header">
 	<div class="row">
 		<div class="medium-6 large-6 medium-push-6 columns main-header-inner">
 		<?php if ($breadcrumb): ?>
@@ -15,4 +15,4 @@
 			<?php endif; ?>
 		</div>
 	</div>
-</header>
+</div>
