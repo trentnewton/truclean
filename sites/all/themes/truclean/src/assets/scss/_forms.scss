@@ -68,3 +68,8 @@
 .form-required {
 	@extend .error;
 }
+
+.search-box-input[type=search] {
+	-webkit-appearance: none;
+	border: 0;
+}
