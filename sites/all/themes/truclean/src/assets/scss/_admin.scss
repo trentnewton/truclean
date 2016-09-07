@@ -94,8 +94,7 @@ ul.tabs.primary {
     @extend .callout.alert;
   }
 
-  &.status,
-  &.webform-confirmation {
+  &.status {
     @extend .callout.success;
   }
 
@@ -105,12 +104,15 @@ ul.tabs.primary {
 
 }
 
+.webform-confirmation {
+  @extend .callout, .callout.secondary;
+}
+
 .error {
   color: $alert-color;
 }
 
-.status,
-.webform-confirmation {
+.status {
   color: $success-color;
 }
 
