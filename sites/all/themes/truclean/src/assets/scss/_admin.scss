@@ -105,14 +105,15 @@ ul.tabs.primary {
 }
 
 .webform-confirmation {
-  @extend .callout, .callout.secondary;
+  @extend .callout, .callout.success;
 }
 
 .error {
   color: $alert-color;
 }
 
-.status {
+.status,
+.webform-confirmation {
   color: $success-color;
 }
 
