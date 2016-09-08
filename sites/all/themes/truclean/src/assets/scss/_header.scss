@@ -171,7 +171,7 @@ a.site-logo {
     text-align: center;
     cursor: pointer;
     color: $anchor-color;
-    background: white;
+    background: $white;
     transition: all $transition-time;
 
     &:hover,
@@ -180,12 +180,12 @@ a.site-logo {
     }
 
     @include breakpoint(small only) {
-        color: white;
+        color: $white;
         background: $anchor-color;
 
         &:hover,
         &:focus {
-            color: white;
+            color: $white;
             background: $anchor-color-hover;
         }
 
@@ -206,7 +206,7 @@ a.site-logo {
 
     .search-box-icon,
     .search-box-submit {
-        color: white;
+        color: $white;
         background: $anchor-color;
 
         &:hover,
