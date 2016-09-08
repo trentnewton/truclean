@@ -8,7 +8,7 @@
 			<?php include ($directory."/partials/title_header.php"); ?>
 			<?php include ($directory."/partials/main_product_categories.php"); ?>
 			<?php if ($messages): ?>
-			<div class="row column">
+			<div class="admin-links row column">
 				<?php print $messages; ?>
 			</div>
 			<?php endif; ?>
@@ -16,10 +16,8 @@
 			// Check to see if $user has the administrator role.
 			if (in_array('administrator', array_values($user->roles))) { ?>
 				<?php if ($tabs): ?>
-				<div class="admin-links">
-					<div class="row column">
-						<?php print render($tabs); ?>
-					</div>
+				<div class="admin-links row column">
+					<?php print render($tabs); ?>
 				</div>
 				<?php endif; ?>
 				<?php print render($page['help']); ?>
