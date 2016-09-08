@@ -87,13 +87,9 @@ ul.tabs.primary {
 
 }
 
-div.admin-links {
-
-  &:last-child {
-    padding-top: 0;
-    margin-top: rem-calc(-34)
-  }
-
+.admin-links {
+  padding-top: rem-calc(50);
+  padding-bottom: rem-calc(50);
 }
 
 .messages {

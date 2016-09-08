@@ -41,8 +41,12 @@ iframe {
 
 p {
 
-  &:last-child {
+  &:nth-last-child(1) {
     margin-bottom: 0;
+  }
+
+  &:only-child {
+    margin-bottom: $paragraph-margin-bottom;
   }
 
 }
