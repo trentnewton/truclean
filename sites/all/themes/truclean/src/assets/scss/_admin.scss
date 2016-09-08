@@ -87,6 +87,14 @@ ul.tabs.primary {
 
 }
 
+.admin-links {
+
+  &:last-child {
+    padding-top: 0;
+  }
+
+}
+
 .messages {
   @extend .callout;
 
