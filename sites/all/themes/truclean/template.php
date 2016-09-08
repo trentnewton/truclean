@@ -198,7 +198,7 @@ function truclean_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_pass') {
     $form['actions']['submit'] = array
     (
-      '#prefix' => '<button type="submit" name="op" class="button" id="edit-submit">' . t('Email new password') . '</button>',
+      '#prefix' => '<button type="submit" name="op" class="button">' . t('Email new password') . '</button>',
       '#type' => 'submit',
       '#attributes' => array( 'class' => array( 'hide' )),
     );
@@ -207,7 +207,7 @@ function truclean_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_pass_reset') {
     $form['actions']['submit'] = array
     (
-      '#prefix' => '<button type="submit" name="op" class="button" id="edit-submit">' . t('Log in') . '</button>',
+      '#prefix' => '<button type="submit" name="op" class="button">' . t('Log in') . '</button>',
       '#type' => 'submit',
       '#attributes' => array( 'class' => array( 'hide' )),
     );
@@ -226,7 +226,7 @@ function truclean_form_alter(&$form, &$form_state, $form_id) {
     );
     $form['actions']['submit'] = array
     (
-      '#prefix' => '<button type="submit" name="op" class="button" id="edit-submit">' . t('Log in') . '</button>',
+      '#prefix' => '<button type="submit" name="op" class="button">' . t('Log in') . '</button>',
       '#type' => 'submit',
       '#attributes' => array( 'class' => array( 'hide' )), // hide the input field
     );
