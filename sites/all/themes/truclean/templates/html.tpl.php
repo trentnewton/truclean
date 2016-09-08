@@ -2,7 +2,6 @@
 <html class="no-js" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="HandheldFriendly" content="true">
 	<title><?php print $head_title; ?></title>
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/favicon-32x32.png" sizes="32x32">
@@ -10,7 +9,6 @@
 	<link rel="manifest" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/manifest.json">
 	<link rel="mask-icon" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/safari-pinned-tab.svg" color="#286bb3">
 	<meta name="theme-color" content="#ffffff">
-	<?php print $head; ?>
 	<?php
 		global $user;
 		// Check to see if $user has the administrator role.
@@ -19,6 +17,7 @@
 		}
 	?>
 	<link rel="stylesheet" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/css/app.css">
+	<?php print $head; ?>
 	</head>
 	<body id="top" class="<?php print $classes; ?>" <?php print $attributes;?> itemscope itemtype="http://schema.org/WebPage">
 		<?php include ($directory."/partials/svg.php"); ?>
