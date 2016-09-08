@@ -7,18 +7,24 @@
 			<?php include ($directory."/partials/header.php"); ?>
 			<?php include ($directory."/partials/title_header.php"); ?>
 			<?php include ($directory."/partials/main_product_categories.php"); ?>
+			<?php global $user;
+			// Check to see if $user has the administrator role.
+			if (!in_array('administrator', array_values($user->roles))) { ?>
 			<?php if ($messages): ?>
 			<div class="admin-links row column">
 				<?php print $messages; ?>
 			</div>
 			<?php endif; ?>
+			<?php } ?>
 			<?php global $user;
 			// Check to see if $user has the administrator role.
 			if (in_array('administrator', array_values($user->roles))) { ?>
+			<div class="admin-links row column">
+				<?php if ($messages): ?>
+					<?php print $messages; ?>
+				<?php endif; ?>
 				<?php if ($tabs): ?>
-				<div class="admin-links row column">
 					<?php print render($tabs); ?>
-				</div>
 				<?php endif; ?>
 				<?php print render($page['help']); ?>
 				<?php if ($action_links): ?>
@@ -26,6 +32,7 @@
 					<?php print render($action_links); ?>
 				</ul>
 				<?php endif; ?>
+			</div>
 			<?php } ?>
 			<main itemscope itemprop="mainContentOfPage">
 				<?php print render($page['content']); ?>
