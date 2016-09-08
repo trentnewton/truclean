@@ -27,7 +27,8 @@ a.site-logo {
 }
 
 .top-header-wrap {
-    padding: rem-calc(34 0);
+    padding-top: rem-calc(34);
+    padding-bottom: rem-calc(34);
 
     li.is-active {
 
@@ -145,6 +146,8 @@ a.site-logo {
 // search box
 
 .search-box {
+    margin-top: rem-calc(15);
+    margin-bottom: rem-calc(15);
     position: relative;
     min-width: rem-calc(40);
     width: 0;
