@@ -42,3 +42,5 @@ stylesheets[all][] = webform.css
 stylesheets[all][] = uc_product.css
 stylesheets[all][] = uc_store.css
 stylesheets[all][] = uc_order.css
+
+stylesheets[all][] = dist/assets/css/app.css

@@ -9,14 +9,7 @@
 	<link rel="manifest" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/manifest.json">
 	<link rel="mask-icon" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/img/safari-pinned-tab.svg" color="#286bb3">
 	<meta name="theme-color" content="#ffffff">
-	<?php
-		global $user;
-		// Check to see if $user has the administrator role.
-		if (in_array('administrator', array_values($user->roles))) {
-			print $styles;
-		}
-	?>
-	<link rel="stylesheet" href="<?php global $base_path; print $base_path; ?><?php print $directory; ?>/dist/assets/css/app.css">
+	<?php print $styles; ?>
 	<?php print $head; ?>
 	</head>
 	<body id="top" class="<?php print $classes; ?>" <?php print $attributes;?> itemscope itemtype="http://schema.org/WebPage">
@@ -28,6 +21,5 @@
 		<?php print $page; ?>
 		<?php print $scripts; ?>
 		<?php print $page_bottom; ?>
-		<div class="bg-page-footer"></div>
 	</body>
 </html>
