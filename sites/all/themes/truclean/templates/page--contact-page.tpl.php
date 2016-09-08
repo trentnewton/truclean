@@ -9,7 +9,7 @@
 				<?php include ($directory."/partials/title_header.php"); ?>
 			</header>
 			<?php include ($directory."/partials/main_product_categories.php"); ?>
-			<main class="normal-page-content" id="main-content" itemscope itemprop="mainContentOfPage">
+			<main class="normal-page-content" itemscope itemprop="mainContentOfPage">
 				<?php global $user;
 				// Check to see if $user has the administrator role.
 				if (in_array('administrator', array_values($user->roles))) { ?>

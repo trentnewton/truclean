@@ -9,7 +9,7 @@
 				<?php include ($directory."/partials/title_header.php"); ?>
 			</header>
 			<?php include ($directory."/partials/main_product_categories.php"); ?>
-			<main class="normal-page-content" id="main-content" itemscope itemprop="mainContentOfPage">
+			<main class="normal-page-content" itemscope itemprop="mainContentOfPage">
 				<div class="row column">
 					<?php if ($messages): ?>
 		            	<?php print $messages; ?>

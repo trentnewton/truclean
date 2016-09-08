@@ -27,7 +27,7 @@
 				</ul>
 				<?php endif; ?>
 			<?php } ?>
-			<main id="main-content" itemscope itemprop="mainContentOfPage">
+			<main itemscope itemprop="mainContentOfPage">
 				<?php print render($page['content']); ?>
 			</main>
 			<?php include ($directory."/partials/footer.php"); ?>

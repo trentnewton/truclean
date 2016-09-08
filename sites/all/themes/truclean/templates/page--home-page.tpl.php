@@ -16,7 +16,7 @@
 			</section>
 			<?php include ($directory."/partials/main_product_categories.php"); ?>
 			<?php if ($page['content']): ?>
-			<main class="normal-page-content" id="main-content" itemscope itemprop="mainContentOfPage">
+			<main class="normal-page-content" itemscope itemprop="mainContentOfPage">
 				<?php if ($messages): ?>
 				<div class="row column">
 					<?php print $messages; ?>
