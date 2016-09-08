@@ -124,7 +124,6 @@ sites/all/modules/backports
 sites/all/modules/backup_migrate
 sites/all/modules/bean
 sites/all/modules/blockify
-sites/all/modules/boost
 sites/all/modules/captcha
 sites/all/modules/ckeditor
 sites/all/modules/ctools
@@ -154,7 +153,6 @@ sites/all/modules/navigation404
 sites/all/modules/optimizedb
 sites/all/modules/pathauto
 sites/all/modules/plupload
-sites/all/modules/prepopulate
 sites/all/modules/quickedit
 sites/all/modules/recaptcha
 sites/all/modules/redirect
@@ -163,7 +161,6 @@ sites/all/modules/rules
 sites/all/modules/security_review
 sites/all/modules/semanticviews
 sites/all/modules/simplified_menu_admin
-sites/all/modules/stringoverrides
 sites/all/modules/site_map
 sites/all/modules/special_menu_items
 sites/all/modules/taxonomy_menu
