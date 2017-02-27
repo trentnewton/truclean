@@ -16,8 +16,11 @@ function truclean_preprocess_html(&$vars) {
 /**
 * Implements hook_process_html().
 */
-function truclean_process_html(&$vars) {
-  $vars['head_scripts'] = drupal_get_js('head_scripts');
+function truclean_process_html(&$variables) {
+  $variables['head_scripts'] = drupal_get_js('head_scripts');
+
+  // Remove Query Strings from CSS filenames (CacheBuster)
+  $variables['styles'] = preg_replace('/\.css\?[^"]+/','.css', $variables['styles']);
 }
 
 function truclean_js_alter(&$js) {
@@ -256,6 +259,14 @@ function truclean_form_user_login_ajax($form, $form_state) {
   }
 }
 
+function truclean_block_view_user_login_alter(&$data, $block) {
+  global $user;
+  if (!$user->uid && !(arg(0) == 'user' && (arg(1) == 'login'))) {
+        $block->subject = t('User login');
+        $block->content = drupal_get_form('user_login_block');
+  }
+}
+
 // breadcrumbs
 
 function truclean_breadcrumb($variables) {
@@ -277,12 +288,4 @@ function truclean_breadcrumb($variables) {
     $crumbs .= '<li><span class="show-for-sr">Current: </span>' . drupal_get_title() . '</li></ul></nav>';
   }
   return $crumbs;
-}
-
-function truclean_block_view_user_login_alter(&$data, $block) {
-  global $user;
-  if (!$user->uid && !(arg(0) == 'user' && (arg(1) == 'login'))) {
-        $block->subject = t('User login');
-        $block->content = drupal_get_form('user_login_block');
-  }
 }
