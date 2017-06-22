@@ -43,7 +43,7 @@ function truclean_js_alter(&$js) {
   'sites/all/modules/autoupload/js/autoupload.js' => TRUE,
   'sites/all/modules/custom_search/js/custom_search.js' => TRUE,
   'sites/all/modules/devel/devel_krumo_path.js' => TRUE,
-  'sites/all/modules/webform/js/webform.js' => TRUE,
+  // 'sites/all/modules/webform/js/webform.js' => TRUE,
   // 'misc/ajax.js' => TRUE,
   'misc/jquery.js' => TRUE,
   // 'misc/jquery.once.js' => TRUE,
