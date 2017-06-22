@@ -2,6 +2,12 @@
 	font-weight: $global-weight-bold;
 }
 
+.fieldset-reset {
+	border: $fieldset-border;
+	padding: $fieldset-padding;
+	margin: $fieldset-margin;
+}
+
 .container-inline {
 
 	.form-type-checkbox {
