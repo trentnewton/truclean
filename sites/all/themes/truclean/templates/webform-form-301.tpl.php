@@ -205,8 +205,16 @@ if (isset($form['preview_message'])) {
     </div>
 </fieldset>
 <div class="row column">
+	<input type="hidden" name="details[sid]">
+	<input type="hidden" name="details[page_num]" value="1">
+	<input type="hidden" name="details[page_count]" value="1">
+	<input type="hidden" name="details[finished]" value="0">
+	<input type="hidden" name="form_build_id" value="<?= $form['#build_id'] ?>">
+	<input type="hidden" name="form_id" value="webform_client_form_301">
+	<input type="hidden" name="webform_ajax_wrapper_id" value="webform-ajax-wrapper-301">
 	<button class="button" type="submit" id="edit-webform-ajax-submit-301" name="op"><?php print t('Send');?></button>
+	<?php print drupal_render($form['captcha']); ?>
+	<div class="hide">
+		<?php print drupal_render($form['actions']['submit']); ?>
+	</div>
 </div>
-
-<?php print drupal_render($form['submitted']); ?>
-<?php print drupal_render_children($form); ?>
