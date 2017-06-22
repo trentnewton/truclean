@@ -13,7 +13,7 @@ if (isset($form['preview_message'])) {
 // Always print out the entire $form. This renders the remaining pieces of the
 // form that haven't yet been rendered above (buttons, hidden elements, etc).
 //print drupal_render_children($form);
-    print('<pre>'.print_r($form,1).'</pre>');
+    // print('<pre>'.print_r($form,1).'</pre>');
 ?>
 
 <fieldset class="fieldset-reset">
@@ -173,7 +173,7 @@ if (isset($form['preview_message'])) {
         	<?php print drupal_render($form['submitted']['second_trade_reference_phone']); ?>
         </div>
         <div class="small-4 columns">
-        	<?php print drupal_render($form['submitted']['second)trade_reference_email']); ?>
+        	<?php print drupal_render($form['submitted']['second_trade_reference_email']); ?>
         </div>
     </div>
     <div class="row">
