@@ -32,13 +32,13 @@ if (isset($form['preview_message'])) {
         </div>
     </div>
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['business_suburb_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['business_state_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['business_postcode_address']); ?>
         </div>
     </div>
@@ -53,13 +53,13 @@ if (isset($form['preview_message'])) {
         </div>
     </div>
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['postal_suburb_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['postal_state_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
 			<?php print drupal_render($form['submitted']['postal_postcode_address']); ?>
         </div>
     </div>
@@ -83,13 +83,13 @@ if (isset($form['preview_message'])) {
 <fieldset class="fieldset-reset">
 	 <legend><strong><?php print t('Contact Information');?></strong></legend>
 	 <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['account_contact_name']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['account_contact_phone']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['account_contact_email']); ?>
         </div>
     </div>
@@ -104,13 +104,13 @@ if (isset($form['preview_message'])) {
         </div>
     </div>
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['director_owner_suburb_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['director_owner_state_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['director_owner_postcode_address']); ?>
         </div>
     </div>
@@ -133,13 +133,13 @@ if (isset($form['preview_message'])) {
         </div>
     </div>
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['second_director_owner_suburb_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['second_director_owner_state_address']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['second_director_owner_postcode_address']); ?>
         </div>
     </div>
@@ -155,35 +155,35 @@ if (isset($form['preview_message'])) {
 <fieldset class="fieldset-reset">
 	 <legend><strong><?php print t('Trade References');?></strong></legend>
 	 <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['trade_reference_name']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['trade_reference_phone']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['trade_reference_email']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['second_trade_reference_name']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['second_trade_reference_phone']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['second_trade_reference_email']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['third_trade_reference_name']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['third_trade_reference_phone']); ?>
         </div>
-        <div class="small-4 columns">
+        <div class="small-12 medium-4 columns">
         	<?php print drupal_render($form['submitted']['third_trade_reference_email']); ?>
         </div>
     </div>
@@ -191,10 +191,10 @@ if (isset($form['preview_message'])) {
 <fieldset class="fieldset-reset">
 	<legend><strong><?php print t('Final Details');?></strong></legend>
 	<div class="row">
-        <div class="small-6 columns">
+        <div class="small-12 medium-6 columns">
             <?php print drupal_render($form['submitted']['applicant_name']); ?>
         </div>
-        <div class="small-6 columns">
+        <div class="small-12 medium-6 columns">
             <?php print drupal_render($form['submitted']['applicant_position']); ?>
         </div>
     </div>
@@ -209,4 +209,4 @@ if (isset($form['preview_message'])) {
 </div>
 
 <?php print drupal_render($form['submitted']); ?>
-<?php print drupal_render($form['children']); ?>
+<?php print drupal_render_children($form); ?>
