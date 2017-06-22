@@ -198,29 +198,28 @@ function truclean_form_alter(&$form, &$form_state, $form_id) {
     unset($form['advanced']['type']['#title']);
   }
 
-  if ($form_id == 'webform_client_form_301') {
-    $form['#attributes']['class'][] = 'search-form-custom';
-    $form['basic']['keys']['#theme_wrappers'] = array();
-    $form['basic']['keys']['#prefix'] = '<div class="row"><div class="medium-9 large-9 medium-push-3 columns search-form-inputs"><div class="row"><div class="medium-9 large-10 columns">';
-    $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
-    $form['basic']['keys']['#suffix'] = '</div>';
-    $form['basic']['submit'] = array
-    (
-      '#prefix' => '<div class="medium-3 large-2 columns"><button type="submit" name="op" class="expanded button">' . t('Search') . '</button></div></div>',
-      '#type' => 'submit',
-      '#attributes' => array( 'class' => array( 'hide' )), // hide the input field
-    );
-    $form['advanced']['#attributes']['class'][] = 'medium-3 large-3 medium-pull-9 columns';
-    $form['advanced']['#title'] = '<h3><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>&nbsp;' . t('Results from') . '</h3>';
-    $form['advanced']['submit'] = array
-    (
-      '#prefix' => '<button type="submit" name="op" class="button">' . t('Advanced search') . '</button>',
-      '#type' => 'submit',
-      '#attributes' => array( 'class' => array( 'hide' )), // hide the input field
-      '#suffix' => '</div>',
-    );
-    unset($form['advanced']['type']['#title']);
-  }
+  // if ($form_id == 'webform_client_form_301') {
+  //   $form['basic']['keys']['#theme_wrappers'] = array();
+  //   $form['basic']['keys']['#prefix'] = '<div class="row"><div class="medium-9 large-9 medium-push-3 columns search-form-inputs"><div class="row"><div class="medium-9 large-10 columns">';
+  //   $form['basic']['keys']['#attributes']['placeholder'] = t('Search');
+  //   $form['basic']['keys']['#suffix'] = '</div>';
+  //   $form['basic']['submit'] = array
+  //   (
+  //     '#prefix' => '<div class="medium-3 large-2 columns"><button type="submit" name="op" class="expanded button">' . t('Search') . '</button></div></div>',
+  //     '#type' => 'submit',
+  //     '#attributes' => array( 'class' => array( 'hide' )), // hide the input field
+  //   );
+  //   $form['advanced']['#attributes']['class'][] = 'medium-3 large-3 medium-pull-9 columns';
+  //   $form['advanced']['#title'] = '<h3><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>&nbsp;' . t('Results from') . '</h3>';
+  //   $form['advanced']['submit'] = array
+  //   (
+  //     '#prefix' => '<button type="submit" name="op" class="button">' . t('Advanced search') . '</button>',
+  //     '#type' => 'submit',
+  //     '#attributes' => array( 'class' => array( 'hide' )), // hide the input field
+  //     '#suffix' => '</div>',
+  //   );
+  //   unset($form['advanced']['type']['#title']);
+  // }
 
   if ($form_id == 'user_pass') {
     $form['actions']['submit'] = array
