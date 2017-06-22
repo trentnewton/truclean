@@ -203,6 +203,11 @@ if (isset($form['preview_message'])) {
         	<?php print drupal_render($form['submitted']['terms']); ?>
         </div>
     </div>
+    <div class="row">
+    	<div class="small-12 columns">
+        	<?php print drupal_render($form['submitted']['equipment']); ?>
+        </div>
+    </div>
 </fieldset>
 <div class="row column">
 	<input type="hidden" name="details[sid]">
