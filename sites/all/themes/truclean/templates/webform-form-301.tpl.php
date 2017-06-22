@@ -207,3 +207,6 @@ if (isset($form['preview_message'])) {
 <div class="row column">
 	<button class="button" type="submit" id="edit-webform-ajax-submit-301" name="op"><?php print t('Send');?></button>
 </div>
+
+<?php print drupal_render($form['submitted']); ?>
+<?php print drupal_render($form['children']); ?>
