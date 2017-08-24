@@ -57,7 +57,7 @@ sites/*/private
 
 # Ignore default text files
 .editorconfig
-robots.txt
+# robots.txt
 /CHANGELOG.txt
 /COPYRIGHT.txt
 /INSTALL*.txt
@@ -87,6 +87,7 @@ xmlrpc.php
 /scripts
 /sites/default
 /themes
+/config
 
  -------------------------
 # BEGIN Whitelisted Files
@@ -164,6 +165,7 @@ sites/all/modules/security_review
 sites/all/modules/semanticviews
 sites/all/modules/simplified_menu_admin
 sites/all/modules/site_map
+sites/all/modules/smtp
 sites/all/modules/special_menu_items
 sites/all/modules/taxonomy_menu
 sites/all/modules/telephone
@@ -173,6 +175,7 @@ sites/all/modules/ubercart
 sites/all/modules/uc_ajax_cart_alt
 sites/all/modules/uuid
 sites/all/modules/views_bulk_operations
+sites/all/modules/views_infinite_scroll
 sites/all/modules/webform
 sites/all/modules/webform_ajax
 sites/all/modules/xmlsitemap
