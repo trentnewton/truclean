@@ -85,8 +85,8 @@ $(document).ready(function(){
     $('#edit-submitted-city___suburb').val($('input[id*="edit-field-client-address-und-0-locality"]').val());
   });
 
-  $('input[id*="edit-field-client-address-und-0-administrative-area"]').change(function() {
-    $('#edit-submitted-state').val($('input[id*="edit-field-client-address-und-0-administrative-area"]').val());
+  $('input[name="field_client_address[und][0][administrative_area]"]').change(function() {
+    $('#edit-submitted-state').val($('input[name="field_client_address[und][0][administrative_area]"]').val());
   });
 
   $('input[id*="edit-field-client-address-und-0-postal-code"]').change(function() {
