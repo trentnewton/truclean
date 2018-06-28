@@ -8,6 +8,10 @@
 	margin: $fieldset-margin;
 }
 
+legend {
+	font-size: rem-calc(map-deep-get($header-styles, 'medium', 'h5', 'font-size') * 1px);
+}
+
 .container-inline {
 
 	.form-type-checkbox {
