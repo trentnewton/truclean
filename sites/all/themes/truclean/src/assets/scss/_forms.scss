@@ -43,3 +43,9 @@
 	-webkit-appearance: none;
 	border: 0;
 }
+
+.form-item-submitted-date-year,
+.form-item-submitted-date-month,
+.form-item-submitted-date-day {
+	display: inline-block;
+}
