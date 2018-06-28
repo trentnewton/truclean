@@ -61,13 +61,13 @@
 }
 
 [class*="pass"] {
-	background-color: $success-color;
+	background-color: scale-color($success-color, $lightness: -14%);
 }
 
 [class*="satisfactory"] {
-	background-color: $warning-color;
+	background-color: scale-color($warning-color, $lightness: -14%);
 }
 
 [class*="fail"] {
-	background-color: $alert-color;
+	background-color: scale-color($alert-color, $lightness: -14%);
 }
