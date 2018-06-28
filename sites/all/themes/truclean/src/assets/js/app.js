@@ -65,8 +65,16 @@ $(document).ready(function(){
 
   // Kitchen Service Report
 
+  var value = $('input[id*="thoroughfare"]').attr('value');
+  
+
+  // $('#edit-field-client-und').bind('select', function(){
+
+  //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
+  // });
+
   $('#edit-field-client-und').change(function() {
-    $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
+    $('#edit-submitted-address').attr(('input[id*="thoroughfare"]').attr('value'));
   });
 
   $('input[id*="edit-field-company-name-und-0-value"]').change(function() {
