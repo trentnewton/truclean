@@ -15,7 +15,7 @@ import { Triggers } from 'foundation-sites/js/foundation.util.triggers';
 // import { AccordionMenu } from 'foundation-sites/js/foundation.accordionMenu';
 // import { Drilldown } from 'foundation-sites/js/foundation.drilldown';
 // import { Dropdown } from 'foundation-sites/js/foundation.dropdown';
-// import { DropdownMenu } from 'foundation-sites/js/foundation.dropdownMenu';
+import { DropdownMenu } from 'foundation-sites/js/foundation.dropdownMenu';
 // import { Equalizer } from 'foundation-sites/js/foundation.equalizer';
 // import { Interchange } from 'foundation-sites/js/foundation.interchange';
 // import { Magellan } from 'foundation-sites/js/foundation.magellan';
