@@ -65,8 +65,7 @@ $(document).ready(function(){
 
   // Kitchen Service Report
 
-  var value = $('input[id*="thoroughfare"]').attr('value');
-  
+  var address = $('input[id*="thoroughfare"]').attr('value');
 
   // $('#edit-field-client-und').bind('select', function(){
 
@@ -74,7 +73,7 @@ $(document).ready(function(){
   // });
 
   $('#edit-field-client-und').change(function() {
-    $('#edit-submitted-address').attr(('input[id*="thoroughfare"]').attr('value'));
+    $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
   });
 
   $('input[id*="edit-field-company-name-und-0-value"]').change(function() {
