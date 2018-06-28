@@ -35,8 +35,17 @@ if (isset($form['preview_message'])) {
         </div>
     </div>
     <div class="row">
-        <div class="small-12 columns">
+        <div class="small-3 columns">
         	<?php print drupal_render($form['submitted']['address']); ?>
+        </div>
+        <div class="small-3 columns">
+            <?php print drupal_render($form['submitted']['city___suburb']); ?>
+        </div>
+        <div class="small-3 columns">
+            <?php print drupal_render($form['submitted']['state']); ?>
+        </div>
+        <div class="small-3 columns">
+            <?php print drupal_render($form['submitted']['postcode']); ?>
         </div>
     </div>
     <div class="row">
