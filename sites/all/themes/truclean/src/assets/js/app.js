@@ -77,7 +77,7 @@ $(document).ready(function(){
     $('#edit-submitted-phone').val($(this).val());
   });
 
-  $('input[id*="thoroughfare"]').change(function() {
+  $('input[id*="thoroughfare"]').bind('input', function(){
     $('#edit-submitted-address').val($(this).val());
   });
 
