@@ -66,39 +66,39 @@ $(document).ready(function(){
   // Kitchen Service Report
 
   $('input[id*="edit-field-company-name-und-0-value"]').change(function() {
-    $('#edit-submitted-name').val($('input[id*="edit-field-company-name-und-0-value"]').val());
+    $('#edit-submitted-name').val($(this).val());
   });
 
   $('input[id*="edit-field-email-und-0-value"]').change(function() {
-    $('#edit-submitted-email').val($('input[id*="edit-field-email-und-0-value"]').val());
+    $('#edit-submitted-email').val($(this).val());
   });
 
   $('input[id*="edit-field-phone-number-und-0-value"]').change(function() {
-    $('#edit-submitted-phone').val($('input[id*="edit-field-phone-number-und-0-value"]').val());
+    $('#edit-submitted-phone').val($(this).val());
   });
 
-  $('input[id*="edit-field-client-address-und-0-thoroughfare"]').change(function() {
-    $('#edit-submitted-address').val($('input[id*="edit-field-client-address-und-0-thoroughfare"]').val());
+  $('input[id*="thoroughfare"]').change(function() {
+    $('#edit-submitted-address').val($(this).val());
   });
 
   $('input[id*="edit-field-client-address-und-0-locality"]').change(function() {
-    $('#edit-submitted-city___suburb').val($('input[id*="edit-field-client-address-und-0-locality"]').val());
+    $('#edit-submitted-city___suburb').val($(this).val());
   });
 
   $('input[name="field_client_address[und][0][administrative_area]"]').change(function() {
-    $('#edit-submitted-state').val($('input[name="field_client_address[und][0][administrative_area]"]').val());
+    $('#edit-submitted-state').val($(this).val());
   });
 
   $('input[id*="edit-field-client-address-und-0-postal-code"]').change(function() {
-    $('#edit-submitted-postcode').val($('input[id*="edit-field-client-address-und-0-postal-code"]').val());
+    $('#edit-submitted-postcode').val($(this).val());
   });
 
   $('input[id*="edit-field-client-address-und-0-name-line"]').change(function() {
-    $('#edit-submitted-contact').val($('input[id*="edit-field-client-address-und-0-name-line"]').val());
+    $('#edit-submitted-contact').val($(this).val());
   });
 
   $('input[id*="edit-field-machine-model-und-0-value"]').change(function() {
-    $('#edit-submitted-machine-model').val($('input[id*="edit-field-machine-model-und-0-value"]').val());
+    $('#edit-submitted-machine-model').val($(this).val());
   });
 
 });
