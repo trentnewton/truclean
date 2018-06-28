@@ -1,14 +1,17 @@
 'use strict';
 
-import plugins  from 'gulp-load-plugins';
-import yargs    from 'yargs';
-// import browser  from 'browser-sync';
-import gulp     from 'gulp';
-import panini   from 'panini';
-import rimraf   from 'rimraf';
-import sherpa   from 'style-sherpa';
-import yaml     from 'js-yaml';
-import fs       from 'fs';
+import plugins       from 'gulp-load-plugins';
+import yargs         from 'yargs';
+import browser       from 'browser-sync';
+import gulp          from 'gulp';
+import panini        from 'panini';
+import rimraf        from 'rimraf';
+import sherpa        from 'style-sherpa';
+import yaml          from 'js-yaml';
+import fs            from 'fs';
+import webpackStream from 'webpack-stream';
+import webpack2      from 'webpack';
+import named         from 'vinyl-named';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -30,7 +33,7 @@ gulp.task('build',
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
-  gulp.series('build', watch));
+  gulp.series('build', server, watch));
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -86,19 +89,33 @@ function sass() {
     }))
     // Comment in the pipe below to run UnCSS in production
     //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
-    .pipe($.if(PRODUCTION, $.cssnano()))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-    .pipe(gulp.dest(PATHS.dist + '/assets/css'));
-    // .pipe(browser.reload({ stream: true }));
+    .pipe(gulp.dest(PATHS.dist + '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
 }
 
+let webpackConfig = {
+  module: {
+    rules: [
+      {
+        test: /.js$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
+      }
+    ]
+  }
+}
 // Combine JavaScript into one file
 // In production, the file is minified
 function javascript() {
-  return gulp.src(PATHS.javascript)
+  return gulp.src(PATHS.entries)
+    .pipe(named())
     .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.concat('app.js'))
+    .pipe(webpackStream(webpackConfig, webpack2))
     .pipe($.if(PRODUCTION, $.uglify()
       .on('error', e => { console.log(e); })
     ))
@@ -116,27 +133,27 @@ function images() {
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
-// // Start a server with BrowserSync to preview the site in
-// function server(done) {
-//   browser.init({
-//     server: PATHS.dist, port: PORT
-//   });
-//   done();
-// }
+// Start a server with BrowserSync to preview the site in
+function server(done) {
+  browser.init({
+    server: PATHS.dist, port: PORT
+  });
+  done();
+}
 
-// // Reload the browser with BrowserSync
-// function reload(done) {
-//   browser.reload();
-//   done();
-// }
+// Reload the browser with BrowserSync
+function reload(done) {
+  browser.reload();
+  done();
+}
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/pages/**/*.html').on('change', gulp.series(pages));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('change', gulp.series(resetPages, pages));
-  gulp.watch('src/assets/scss/**/*.scss', sass);
-  gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(javascript));
-  gulp.watch('src/assets/img/**/*').on('change', gulp.series(images));
-  gulp.watch('src/styleguide/**').on('change', gulp.series(styleGuide));
+  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
+  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch('src/assets/scss/**/*.scss').on('all', sass);
+  gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
+  gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
+  gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
 }

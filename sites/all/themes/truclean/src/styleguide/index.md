@@ -1,100 +1,100 @@
 # The Grid
 
-<p class="lead">Problem: You've got tons of content, each needing different sized vertical columns, and don't know how to quick and easily get it all done. Solution: The awesome grid!</p>
+<p class="lead">Problem: You've got tons of content, each needing different sized cells, and don't know how to quick and easily get it all done. Solution: The awesome XY grid!</p>
 
 ---
 
 ## Overview
 
-The grid is built around two key elements: rows and columns. Rows create a max-width and contain the columns, and columns create the final structure. Everything on your page that you don't give a specific structural style to should be within a row or column.
+The grid is built around two key elements: grid-x and cells. grid-container create a max-width and contain the grid, and cells create the final structure. Everything on your page that you don't give a specific structural style to should be within a grid-x or cell.
 
 ---
 
 ## Nesting
 
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
+In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
 
 ---
 
 ## How to Use
 
-Using this framework is easy. Here's how your code will look when you use a series of <div> tags to create vertical columns.
+Using this framework is easy. Here's how your code will look when you use a series of `<div>` tags to create cells.
 
 ```html
-<div class="row">
-  <div class="small-6 medium-4 large-3 columns">...</div>
-  <div class="small-6 medium-8 large-9 columns">...</div>
+<div class="grid-x">
+  <div class="cell small-6 medium-4 large-3">...</div>
+  <div class="cell small-6 medium-8 large-9">...</div>
 </div>
 ```
 
-<div class="row display">
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-4 columns">4</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-4">4</div>
+  <div class="cell small-12 large-4">4</div>
+  <div class="cell small-12 large-4">4</div>
 </div>
-<div class="row display">
-  <div class="small-12 large-3 columns">3</div>
-  <div class="small-12 large-6 columns">6</div>
-  <div class="small-12 large-3 columns">3</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-3">3</div>
+  <div class="cell small-12 large-6">6</div>
+  <div class="cell small-12 large-3">3</div>
 </div>
-<div class="row display">
-  <div class="small-12 large-2 columns">2</div>
-  <div class="small-12 large-8 columns">8</div>
-  <div class="small-12 large-2 columns">2</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-2">2</div>
+  <div class="cell small-12 large-8">8</div>
+  <div class="cell small-12 large-2">2</div>
 </div>
-<div class="row display">
-  <div class="small-12 large-3 columns">3</div>
-  <div class="small-12 large-9 columns">9</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-3">3</div>
+  <div class="cell small-12 large-9">9</div>
 </div>
-<div class="row display">
-  <div class="small-12 large-4 columns">4</div>
-  <div class="small-12 large-8 columns">8</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-4">4</div>
+  <div class="cell small-12 large-8">8</div>
 </div>
-<div class="row display">
-  <div class="small-12 large-5 columns">5</div>
-  <div class="small-12 large-7 columns">7</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-5">5</div>
+  <div class="cell small-12 large-7">7</div>
 </div>
-<div class="row display">
-  <div class="small-12 large-6 columns">6</div>
-  <div class="small-12 large-6 columns">6</div>
+<div class="grid-x display">
+  <div class="cell small-12 large-6">6</div>
+  <div class="cell small-12 large-6">6</div>
 </div>
 
 ---
 
-## Nesting Rows
+## Nesting grid-x
 
-In the Grid you can nest columns down as far as you'd like. Just embed rows inside columns and go from there. Each embedded row can contain up to 12 columns.
+In the Grid you can nest cells down as far as you'd like. Just embed grid-x inside cells and go from there. Each embedded grid-x can contain up to 12 cells.
 
 ```html
-<div class="row">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
+<div class="grid-x">
+  <div class="cell small-8">8
+    <div class="grid-x">
+      <div class="cell small-8">8 Nested
+        <div class="grid-x">
+          <div class="cell small-8">8 Nested Again</div>
+          <div class="cell small-4">4</div>
         </div>
       </div>
-      <div class="small-4 columns">4</div>
+      <div class="cell small-4">4</div>
     </div>
   </div>
-  <div class="small-4 columns">4</div>
+  <div class="cell small-4">4</div>
 </div>
 ```
 
-<div class="row display">
-  <div class="small-8 columns">8
-    <div class="row">
-      <div class="small-8 columns">8 Nested
-        <div class="row">
-          <div class="small-8 columns">8 Nested Again</div>
-          <div class="small-4 columns">4</div>
+<div class="grid-x display">
+  <div class="cell small-8">8
+    <div class="grid-x">
+      <div class="cell small-8">8 Nested
+        <div class="grid-x">
+          <div class="cell small-8">8 Nested Again</div>
+          <div class="cell small-4">4</div>
         </div>
       </div>
-      <div class="small-4 columns">4</div>
+      <div class="cell small-4">4</div>
     </div>
   </div>
-  <div class="small-4 columns">4</div>
+  <div class="cell small-4">4</div>
 </div>
 
 ---
@@ -104,23 +104,23 @@ In the Grid you can nest columns down as far as you'd like. Just embed rows insi
 As you've probably noticed in the examples above, you have access to a small, medium, and large grid. If you know that your grid structure will be the same for small devices as it will be on large devices, just use the small grid. You can override your small grid classes by adding medium or large grid classes.
 
 ```html
-<div class="row">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
+<div class="grid-x">
+  <div class="cell small-2">2</div>
+  <div class="cell small-10">10, last</div>
 </div>
-<div class="row">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
+<div class="grid-x">
+  <div class="cell small-3">3</div>
+  <div class="cell small-9">9, last</div>
 </div>
 ```
 
-<div class="row display">
-  <div class="small-2 columns">2</div>
-  <div class="small-10 columns">10, last</div>
+<div class="grid-x display">
+  <div class="cell small-2">2</div>
+  <div class="cell small-10">10, last</div>
 </div>
-<div class="row display">
-  <div class="small-3 columns">3</div>
-  <div class="small-9 columns">9, last</div>
+<div class="grid-x display">
+  <div class="cell small-3">3</div>
+  <div class="cell small-9">9, last</div>
 </div>
 
 
@@ -131,32 +131,32 @@ As you've probably noticed in the examples above, you have access to a small, me
 
 ---
 
-<div class="row up-1 medium-up-3 large-up-5">
-  <div class="column">
+<div class="grid-x up-1 medium-up-3 large-up-5">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #2199e8"></span>
       #2199e8
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #3adb76"></span>
       #3adb76
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #ffae00"></span>
       #ffae00
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #ec5840"></span>
       #ec5840
     </div>
   </div>
-  <div class="column">
+  <div class="cell">
     <div class="color-block">
       <span style="background: #0a0a0a"></span>
       #0a0a0a
@@ -290,51 +290,51 @@ Form elements in Foundation are styled based on their type attribute rather than
 
 ```html_example
 <form>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="cell large-12">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6">
       <label>Label</label>
       <input type="text" placeholder="placeholder">
     </div>
-    <div class="large-6 columns">
-      <div class="row collapse">
+    <div class="cell large-6">
+
         <label>Label</label>
         <div class="input-group">
           <input class="input-group-field" type="text" placeholder="placeholder">
           <span class="input-group-label">.com</span>
         </div>
-      </div>
+
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="cell large-12">
       <label>Select Box</label>
       <select>
-        <option value="good">Good</option>
+        <option value="good">Go od</option>
         <option value="better">Better</option>
         <option value="best">Best</option>
       </select>
     </div>
   </div>
-  <div class="row">
-    <div class="large-6 columns">
+  <div class="grid-x">
+    <div class="cell large-6">
       <label>Choose Your Favorite</label>
       <input type="radio" name="radio1" value="radio1" id="radio1"><label for="radio1">Red</label>
       <input type="radio" name="radio2" value="radio2" id="radio2"><label for="radio2">Blue</label>
     </div>
-    <div class="large-6 columns">
+    <div class="cell large-6">
       <label>Check these out</label>
       <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
       <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
+  <div class="grid-x">
+    <div class="cell large-12">
       <label>Textarea Label</label>
       <textarea placeholder="placeholder"></textarea>
     </div>
