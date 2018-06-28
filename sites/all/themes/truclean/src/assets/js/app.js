@@ -72,7 +72,7 @@ $(document).ready(function(){
   //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
   // });
 
-  $('#edit-field-client-und').change(function() {
+  $('#edit-field-client-und').bind('select', function(){
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
   });
 
