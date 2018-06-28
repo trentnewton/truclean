@@ -11,7 +11,8 @@ import Foundation from 'foundation-sites';
 
 // $(document).foundation();
 
-(function($) {
+
+jQuery(document).ready(function($) {
 
   'use strict';
 
@@ -112,4 +113,4 @@ import Foundation from 'foundation-sites';
     }
   }
 
-})(jQuery);
+});
