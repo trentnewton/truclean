@@ -53,21 +53,21 @@
 .form-type-checkbox {
 	background-color: $input-background;
 	padding: rem-calc(10 10 0);
-	margin-right: rem-calc(10);
+	margin: rem-calc(0 10 16 0);
 }
 
 .form-type-checkbox:last-child {
-	margin-right: 0;
+	margin: 0;
 }
 
 [class*="pass"] {
-	background-color: scale-color($success-color, $lightness: -14%);
+	background-color: scale-color($success-color, $lightness: 50%);
 }
 
 [class*="satisfactory"] {
-	background-color: scale-color($warning-color, $lightness: -14%);
+	background-color: scale-color($warning-color, $lightness: 50%);
 }
 
 [class*="fail"] {
-	background-color: scale-color($alert-color, $lightness: -14%);
+	background-color: scale-color($alert-color, $lightness: 50%);
 }
