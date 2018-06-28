@@ -65,6 +65,10 @@ $(document).ready(function(){
 
   // Kitchen Service Report
 
+  $('#edit-field-client-und').change(function() {
+    $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
+  });
+
   $('input[id*="edit-field-company-name-und-0-value"]').change(function() {
     $('#edit-submitted-name').val($(this).val());
   });
