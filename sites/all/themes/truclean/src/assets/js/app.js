@@ -62,6 +62,45 @@ $(document).ready(function(){
       submitIcon.click();
     }
   });
+
+  // Kitchen Service Report
+
+  $('#edit-field-client-und').change(function() {
+    $('#edit-submitted-name').val($('#edit-field-client-und').val());
+  });
+
+  $('#edit-field-email-und-0-value').change(function() {
+    $('#edit-submitted-email').val($('#edit-field-email-und-0-value').val());
+  });
+
+  $('#edit-field-phone-number-und-0-value').change(function() {
+    $('#edit-submitted-phone').val($('#edit-field-phone-number-und-0-value').val());
+  });
+
+  $('#edit-field-client-address-und-0-thoroughfare').change(function() {
+    $('#edit-submitted-address').val($('#edit-field-client-address-und-0-thoroughfare').val());
+  });
+
+  $('#edit-field-client-address-und-0-locality').change(function() {
+    $('#edit-submitted-city___suburb').val($('#edit-field-client-address-und-0-locality').val());
+  });
+
+  $('#edit-field-client-address-und-0-administrative-area').change(function() {
+    $('#edit-submitted-state').val($('#edit-field-client-address-und-0-administrative-area').val());
+  });
+
+  $('#edit-field-client-address-und-0-postal-code').change(function() {
+    $('#edit-submitted-postcode').val($('#edit-field-client-address-und-0-postal-code').val());
+  });
+
+  $('#edit-field-client-address-und-0-name-line').change(function() {
+    $('#edit-submitted-contact').val($('#edit-field-client-address-und-0-name-line').val());
+  });
+
+  $('#edit-field-machine-model-und-0-value').change(function() {
+    $('#edit-submitted-machine-model').val($('#edit-field-machine-model-und-0-value').val());
+  });
+
 });
 
 // wrap tables with overflow auto
