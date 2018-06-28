@@ -145,10 +145,10 @@ if (isset($form['preview_message'])) {
 <fieldset class="fieldset-reset">
 	 <legend><strong><?php print t('Final Details');?></strong></legend>
 	 <div class="row">
-        <div class="small-6 medium-4 columns">
+        <div class="small-6 columns">
         	<?php print drupal_render($form['submitted']['comments']); ?>
         </div>
-        <div class="small-6 medium-4 columns">
+        <div class="small-6 columns">
         	<?php print drupal_render($form['submitted']['representative_name']); ?>
         </div>
     </div>
