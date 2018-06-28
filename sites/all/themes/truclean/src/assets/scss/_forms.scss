@@ -49,3 +49,25 @@
 .form-item-submitted-date-day {
 	display: inline-block;
 }
+
+.form-type-checkbox {
+	background-color: $input-background;
+	padding: rem-calc(10 10 0);
+	margin-right: rem-calc(10);
+}
+
+.form-type-checkbox:last-child {
+	margin-right: 0;
+}
+
+[class*="pass"] {
+	background-color: $success-color;
+}
+
+[class*="satisfactory"] {
+	background-color: $warning-color;
+}
+
+[class*="fail"] {
+	background-color: $alert-color;
+}
