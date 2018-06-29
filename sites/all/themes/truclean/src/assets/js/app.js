@@ -76,11 +76,11 @@ $(document).ready(function(){
     $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
     $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
-    $('#edit-submitted-city___suburb').attr('value',$('input[id*="locality"]').attr('value'));
+    $('#edit-submitted-city-suburb').attr('value',$('input[id*="edit-field-client-address-und-0-locality"]').attr('value'));
     $('#edit-submitted-state').attr('value',$('input[id*="administrative_area"]').attr('value'));
     $('#edit-submitted-postcode').attr('value',$('input[id*="postal-code"]').attr('value'));
     $('#edit-submitted-phone').attr('value',$('input[id*="edit-field-phone-number"]').attr('value'));
-    $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-name-line"]').attr('value'));
+    $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-client-address-und-0-name-line"]').attr('value'));
     $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
   });
 
