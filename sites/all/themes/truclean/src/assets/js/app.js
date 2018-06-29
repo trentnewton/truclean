@@ -70,7 +70,7 @@ $(document).ready(function(){
   //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
   // });
 
-  $('#edit-field-client-und').on('select', function(){
+  $('#edit-field-client-und').change(function() {
     $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
     $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
