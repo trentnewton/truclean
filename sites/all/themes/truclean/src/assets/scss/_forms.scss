@@ -56,13 +56,17 @@ legend {
 
 .not-logged-in .webform-component .form-type-checkbox,
 .webform-component .form-type-checkbox {
-	background-color: $input-background;
-	padding: rem-calc(10 10 0);
-	margin: rem-calc(0 10 16 0);
 
 	.form-checkbox {
 		display: inline-block;
 	}
+
+}
+
+.form-type-checkbox {
+	background-color: $input-background;
+	padding: rem-calc(10 10 0);
+	margin: rem-calc(0 10 16 0);
 
 	&:last-child {
 		margin: 0;
