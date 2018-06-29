@@ -75,3 +75,12 @@ legend {
 [class*="fail"] {
 	background-color: scale-color($alert-color, $lightness: 60%);
 }
+
+.entitytype-reference_form-form form-actions,
+#entityreference-autofill-entityform-reference_form---field_company_name,
+#entityreference-autofill-entityform-reference_form---field_client_address,
+#entityreference-autofill-entityform-reference_form---field_phone_number,
+#entityreference-autofill-entityform-reference_form---field_email,
+#entityreference-autofill-entityform-reference_form---field_machine_model {
+	display: none;
+}
