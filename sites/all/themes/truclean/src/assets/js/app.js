@@ -72,44 +72,16 @@ $(document).ready(function(){
   //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
   // });
 
-  $('#edit-field-client-und').bind('select', function(){
+  $('#edit-field-client-und').change(function() {
+    $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
+    $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
-  });
-
-  $('input[id*="edit-field-company-name-und-0-value"]').change(function() {
-    $('#edit-submitted-name').val($(this).val());
-  });
-
-  $('input[id*="edit-field-email-und-0-value"]').change(function() {
-    $('#edit-submitted-email').val($(this).val());
-  });
-
-  $('input[id*="edit-field-phone-number-und-0-value"]').change(function() {
-    $('#edit-submitted-phone').val($(this).val());
-  });
-
-  $('input[id*="thoroughfare"]').bind('input', function(){
-    $('#edit-submitted-address').val($(this).val());
-  });
-
-  $('input[id*="edit-field-client-address-und-0-locality"]').change(function() {
-    $('#edit-submitted-city___suburb').val($(this).val());
-  });
-
-  $('input[name="field_client_address[und][0][administrative_area]"]').change(function() {
-    $('#edit-submitted-state').val($(this).val());
-  });
-
-  $('input[id*="edit-field-client-address-und-0-postal-code"]').change(function() {
-    $('#edit-submitted-postcode').val($(this).val());
-  });
-
-  $('input[id*="edit-field-client-address-und-0-name-line"]').change(function() {
-    $('#edit-submitted-contact').val($(this).val());
-  });
-
-  $('input[id*="edit-field-machine-model-und-0-value"]').change(function() {
-    $('#edit-submitted-machine-model').val($(this).val());
+    $('#edit-submitted-city___suburb').attr('value',$('input[id*="locality"]').attr('value'));
+    $('#edit-submitted-state').attr('value',$('input[id*="administrative_area"]').attr('value'));
+    $('#edit-submitted-postcode').attr('value',$('input[id*="postal-code"]').attr('value'));
+    $('#edit-submitted-phone').attr('value',$('input[id*="edit-field-phone-number"]').attr('value'));
+    $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-name-line"]').attr('value'));
+    $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
   });
 
 });
