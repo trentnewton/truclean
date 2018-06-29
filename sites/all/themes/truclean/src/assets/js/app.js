@@ -65,14 +65,12 @@ $(document).ready(function(){
 
   // Kitchen Service Report
 
-  var address = $('input[id*="thoroughfare"]').attr('value');
-
   // $('#edit-field-client-und').bind('select', function(){
 
   //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
   // });
 
-  $('#edit-field-client-und').change(function() {
+  $('#edit-field-client-und').on('select', function(){
     $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
     $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
