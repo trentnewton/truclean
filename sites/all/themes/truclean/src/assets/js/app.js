@@ -70,7 +70,7 @@ $(document).ready(function(){
   //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
   // });
 
-  $('#edit-field-client-und').change(function() {
+  $('#edit-field-client-und').on('change', function(){
     $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
     $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
@@ -82,9 +82,9 @@ $(document).ready(function(){
     $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
   });
 
-  $('#edit-field-client-und').on('change', function(){
-    alert('here');
-  });
+  // $('#edit-field-client-und').on('change', function(){
+  //   alert('here');
+  // });
 
   $(".form-radio[value='pass']").parent().addClass('radio-pass');
   $(".form-radio[value='satisfactory']").parent().addClass('radio-satisfactory');
