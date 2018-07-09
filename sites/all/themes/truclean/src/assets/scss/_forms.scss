@@ -63,7 +63,7 @@ legend {
 
 }
 
-.form-type-checkbox {
+.form-type-radio {
 	background-color: $input-background;
 	padding: rem-calc(10 10 0);
 	margin: rem-calc(0 10 16 0);
@@ -74,15 +74,15 @@ legend {
 
 }
 
-[class*="pass"] {
+[class*="radio-pass"] {
 	background-color: scale-color($success-color, $lightness: 60%);
 }
 
-[class*="satisfactory"] {
+[class*="radio-satisfactory"] {
 	background-color: scale-color($warning-color, $lightness: 60%);
 }
 
-[class*="fail"] {
+[class*="radio-fail"] {
 	background-color: scale-color($alert-color, $lightness: 60%);
 }
 

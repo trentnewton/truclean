@@ -82,6 +82,10 @@ $(document).ready(function(){
     $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
   });
 
+  $(".form-radio[value='pass']").parent().addClass('radio-pass');
+  $(".form-radio[value='satisfactory']").parent().addClass('radio-satisfactory');
+  $(".form-radio[value='fail']").parent().addClass('radio-fail');
+
 });
 
 // wrap tables with overflow auto
