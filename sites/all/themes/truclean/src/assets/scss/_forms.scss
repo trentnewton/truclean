@@ -50,17 +50,9 @@ legend {
 
 .form-item-submitted-date-year,
 .form-item-submitted-date-month,
-.form-item-submitted-date-day {
+.form-item-submitted-date-day,
+.form-type-radio  {
 	display: inline-block;
-}
-
-.not-logged-in .webform-component .form-type-checkbox,
-.webform-component .form-type-checkbox {
-
-	.form-checkbox {
-		display: inline-block;
-	}
-
 }
 
 .form-type-radio {
