@@ -84,7 +84,7 @@ $(document).ready(function(){
 
   });
 
-  $('select[id*="administrative_area"] option[selected="selected"]').addClass('radio-pass');
+  $('select[id*="administrative_area"] option[selected="selected"]').parent().addClass('radio-pass');
   $(".form-radio[value='pass']").parent().addClass('radio-pass');
   $(".form-radio[value='satisfactory']").parent().addClass('radio-satisfactory');
   $(".form-radio[value='fail']").parent().addClass('radio-fail');
