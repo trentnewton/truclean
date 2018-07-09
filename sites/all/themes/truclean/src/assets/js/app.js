@@ -69,11 +69,12 @@ $(document).ready(function(){
 
     if ( $(this).val() != "_none" ) {
       setTimeout(function() {
+
         $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
         $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
         $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
         $('#edit-submitted-city-suburb').attr('value',$('input[id*="edit-field-client-address-und-0-locality"]').attr('value'));
-        $('#edit-submitted-state').attr('value',$('select[id*="administrative_area"]').find("[selected]").text());
+        $('#edit-submitted-state').attr('value',$('select[id*="administrative_area"] option').find("[selected='selected']").text());
         $('#edit-submitted-postcode').attr('value',$('input[id*="postal-code"]').attr('value'));
         $('#edit-submitted-phone').attr('value',$('input[id*="edit-field-phone-number"]').attr('value'));
         $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-client-address-und-0-name-line"]').attr('value'));
