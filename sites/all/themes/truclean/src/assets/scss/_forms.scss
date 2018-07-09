@@ -51,7 +51,7 @@ legend {
 .form-item-submitted-date-year,
 .form-item-submitted-date-month,
 .form-item-submitted-date-day,
-.form-type-radio  {
+.form-type-radio {
 	display: inline-block;
 }
 
@@ -80,7 +80,10 @@ legend {
 
 .entitytype-reference_form-form .form-actions,
 #entityreference-autofill-entityform-reference_form---field_company_name,
-#entityreference-autofill-entityform-reference_form---field_client_address,
+#entityreference-autofill-entityform-reference_form---field_address,
+#entityreference-autofill-entityform-reference_form---field_city_suburb,
+#entityreference-autofill-entityform-reference_form---field_state,
+#entityreference-autofill-entityform-reference_form---field_postcode,
 #entityreference-autofill-entityform-reference_form---field_phone_number,
 #entityreference-autofill-entityform-reference_form---field_email,
 #entityreference-autofill-entityform-reference_form---field_machine_model {
