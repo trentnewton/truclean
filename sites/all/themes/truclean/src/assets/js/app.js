@@ -75,11 +75,15 @@ $(document).ready(function(){
     $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
     $('#edit-submitted-city-suburb').attr('value',$('input[id*="edit-field-client-address-und-0-locality"]').attr('value'));
-    $('#edit-submitted-state').attr('value',$('select[id*="administrative_area"] option').prop('selected', true));
+    $('#edit-submitted-state').attr('value',$('select[id*="administrative_area"] option').attr('selected','selected'));
     $('#edit-submitted-postcode').attr('value',$('input[id*="postal-code"]').attr('value'));
     $('#edit-submitted-phone').attr('value',$('input[id*="edit-field-phone-number"]').attr('value'));
     $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-client-address-und-0-name-line"]').attr('value'));
     $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
+  });
+
+  $('#edit-field-client-und').on('change', function(){
+    alert('here');
   });
 
   $(".form-radio[value='pass']").parent().addClass('radio-pass');
