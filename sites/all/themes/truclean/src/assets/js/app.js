@@ -91,7 +91,9 @@ $(document).ready(function(){
   $('#edit-field-client-und').on('change', function(){
 
     if ( $(this).val() != "_none" ) {
-      alert('It changed!');
+      setTimeout(function() {
+        $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
+      }, 1000 /* time to delay */ );
     }
 
   });
