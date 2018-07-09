@@ -31,18 +31,6 @@ $('a[href*=\\#]:not([href=\\#])').click(function () {
 	}
 });
 
-// $('#edit-field-client-und').on('change', function(){
-//     $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
-//     $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
-//     $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
-//     $('#edit-submitted-city-suburb').attr('value',$('input[id*="edit-field-client-address-und-0-locality"]').attr('value'));
-//     $('#edit-submitted-state').attr('value',$('select[id*="administrative_area"]').find("[selected]").text());
-//     $('#edit-submitted-postcode').attr('value',$('input[id*="postal-code"]').attr('value'));
-//     $('#edit-submitted-phone').attr('value',$('input[id*="edit-field-phone-number"]').attr('value'));
-//     $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-client-address-und-0-name-line"]').attr('value'));
-//     $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
-//   });
-
 $(document).ready(function(){
 
   // expanding search bar
@@ -77,22 +65,19 @@ $(document).ready(function(){
 
   // Kitchen Service Report
 
-  // $('#edit-field-client-und').bind('select', function(){
-
-  //   $('#edit-submitted-address').val($('input[id*="thoroughfare"]').val());
-  // });
-
-
-
-  // $('#edit-field-client-und').on('change', function(){
-  //   alert('here');
-  // });
-
   $('#edit-field-client-und').on('change', function(){
 
     if ( $(this).val() != "_none" ) {
       setTimeout(function() {
+        $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
         $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
+        $('#edit-submitted-address').attr('value',$('input[id*="thoroughfare"]').attr('value'));
+        $('#edit-submitted-city-suburb').attr('value',$('input[id*="edit-field-client-address-und-0-locality"]').attr('value'));
+        $('#edit-submitted-state').attr('value',$('select[id*="administrative_area"]').find("[selected]").text());
+        $('#edit-submitted-postcode').attr('value',$('input[id*="postal-code"]').attr('value'));
+        $('#edit-submitted-phone').attr('value',$('input[id*="edit-field-phone-number"]').attr('value'));
+        $('#edit-submitted-contact').attr('value',$('input[id*="edit-field-client-address-und-0-name-line"]').attr('value'));
+        $('#edit-submitted-machine-model').attr('value',$('input[id*="edit-field-machine-model"]').attr('value'));
       }, 1000 /* time to delay */ );
     }
 
