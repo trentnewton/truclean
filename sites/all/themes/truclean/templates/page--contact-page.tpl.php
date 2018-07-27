@@ -5,6 +5,11 @@
 		</div>
 		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
 			<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+				<?php if ($page['header']): ?>
+					<div class="row column notice">
+						<?php print render($page['header']); ?>
+					</div>
+	        	<?php endif; ?>
 				<?php include ($directory."/partials/header.php"); ?>
 				<?php include ($directory."/partials/title_header.php"); ?>
 			</header>

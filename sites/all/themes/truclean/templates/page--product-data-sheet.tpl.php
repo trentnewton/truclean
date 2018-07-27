@@ -4,6 +4,11 @@
 			<?php include ($directory."/partials/off_canvas_menu.php"); ?>
 		</div>
 		<div class="off-canvas-content" id="main-content" data-off-canvas-content>
+			<?php if ($page['header']): ?>
+				<div class="row column notice">
+					<?php print render($page['header']); ?>
+				</div>
+        	<?php endif; ?>
 			<?php include ($directory."/partials/header.php"); ?>
 			<?php include ($directory."/partials/title_header.php"); ?>
 			<?php include ($directory."/partials/main_product_categories.php"); ?>
