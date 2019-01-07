@@ -71,6 +71,7 @@ $(document).ready(function(){
       setTimeout(function() {
 
         $('#edit-submitted-email').attr('value',$('input[id*="edit-field-email"]').attr('value'));
+        $('#edit-submitted-email-2').attr('value',$('input[id*="edit-field-email-2"]').attr('value'));
         $('#edit-submitted-name').attr('value',$('input[id*="edit-field-company-name"]').attr('value'));
         $('#edit-submitted-address').attr('value',$('input[id*="edit-field-address"]').attr('value'));
         $('#edit-submitted-city-suburb').attr('value',$('input[id*="edit-field-city-suburb"]').attr('value'));

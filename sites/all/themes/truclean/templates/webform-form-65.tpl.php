@@ -43,11 +43,14 @@
 <fieldset class="fieldset-reset">
     <legend><strong><?php print t('Company Information');?></strong></legend>
     <div class="row">
-        <div class="small-6 columns">
+        <div class="small-4 columns">
             <?php print drupal_render($form['submitted']['date']); ?>
         </div>
-        <div class="small-6 columns">
+        <div class="small-4 columns">
             <?php print drupal_render($form['submitted']['email']); ?>
+        </div>
+        <div class="small-4 columns">
+            <?php print drupal_render($form['submitted']['email_2']); ?>
         </div>
     </div>
     <div class="row">
