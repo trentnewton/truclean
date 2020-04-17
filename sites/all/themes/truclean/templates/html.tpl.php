@@ -5,6 +5,7 @@
 		<link type="text/plain" rel="author" href="/humans.txt">
 		<?php print $head; ?>
 		<?php print $styles; ?>
+		<link rel="stylesheet" type="text/css" href="https://web.salesin.com/App_Themes/Main/LoginSection.css" />
 	</head>
 	<body id="top" class="<?php print $classes; ?>" <?php print $attributes;?> itemscope itemtype="http://schema.org/WebPage">
 		<?php include ($directory."/partials/svg.php"); ?>
@@ -14,6 +15,11 @@
 		<?php print $page_top; ?>
 		<?php print $page; ?>
 		<?php print $scripts; ?>
+		<script language='javascript' type='text/javascript' src="https://web.salesin.com/Javascript/md5.js"></script>
+		<script language='javascript' type='text/javascript' src="https://web.salesin.com/Javascript/LoginControlGeneration.js"></script>
+		<script language='javascript' type='text/javascript'>
+     		initLoginSection("https://web.salesin.com/", "0wlgznfoPYllA9Q7oknK9w==", "https://b2b.salesin.com/", "https://auth.salesin.com/");
+		</script>
 		<?php print $page_bottom; ?>
 	</body>
 </html>
