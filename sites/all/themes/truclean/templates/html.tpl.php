@@ -15,8 +15,6 @@
 		<?php print $page_top; ?>
 		<?php print $page; ?>
 		<?php print $scripts; ?>
-		<script language='javascript' type='text/javascript' src="https://web.salesin.com/Javascript/md5.js"></script>
-		<script language='javascript' type='text/javascript' src="https://web.salesin.com/Javascript/LoginControlGeneration.js"></script>
 		<?php print $page_bottom; ?>
 	</body>
 </html>
