@@ -17,9 +17,6 @@
 		<?php print $scripts; ?>
 		<script language='javascript' type='text/javascript' src="https://web.salesin.com/Javascript/md5.js"></script>
 		<script language='javascript' type='text/javascript' src="https://web.salesin.com/Javascript/LoginControlGeneration.js"></script>
-		<script language='javascript' type='text/javascript'>
-     		initLoginSection("https://web.salesin.com/", "0wlgznfoPYllA9Q7oknK9w==", "https://b2b.salesin.com/", "https://auth.salesin.com/");
-		</script>
 		<?php print $page_bottom; ?>
 	</body>
 </html>
