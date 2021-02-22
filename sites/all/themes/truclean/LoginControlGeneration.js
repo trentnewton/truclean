@@ -134,7 +134,7 @@ function sendForgotPassword(currentJobSyncSite, currentB2BSite, currentAuthSite,
         type: "GET",
         // dataType: "jsonp",
         data: { email: email, companyCode: code, authenticationToken: code, currentURL: currentURL },
-        // contentType: "application/json; charset=utf-8",
+        contentType: "application/json; charset=utf-8",
         url: currentJobSyncSite + "/WebLogin.asmx/ForgotPassword_JSONP",
         success: function (data, status) {
             var response = data;
