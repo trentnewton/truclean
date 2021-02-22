@@ -1,4 +1,3 @@
-<?php header('Access-Control-Allow-Origin: *'); ?>
 <div id="login" class="reveal" data-reveal data-close-on-click="true" data-animation-in="slide-in-down" data-animation-out="fade-out">
     <!-- <h2>Login</h2>
     <?php if ($messages): ?>
