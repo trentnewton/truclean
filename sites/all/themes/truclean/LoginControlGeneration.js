@@ -47,9 +47,9 @@ function callTestFunction(currentJobSyncSite) {
     $.ajax({
         crossDomain: true,
         type: "GET",
-        // dataType: "jsonp",
+        dataType: "jsonp",
         data: {},
-        // contentType: "application/json; charset=utf-8",
+        contentType: "application/json; charset=utf-8",
         url: currentJobSyncSite + "/WebLogin.asmx/TestFunction",
         success: function (data) {
             alert(data.ResponseMessage);
@@ -132,7 +132,7 @@ function sendForgotPassword(currentJobSyncSite, currentB2BSite, currentAuthSite,
 
     $.ajax({
         type: "GET",
-        // dataType: "jsonp",
+        dataType: "jsonp",
         data: { email: email, companyCode: code, authenticationToken: code, currentURL: currentURL },
         contentType: "application/json; charset=utf-8",
         url: currentJobSyncSite + "/WebLogin.asmx/ForgotPassword_JSONP",
