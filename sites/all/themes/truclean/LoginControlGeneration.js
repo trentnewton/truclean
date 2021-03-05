@@ -302,6 +302,6 @@ function initLoginSection(currentJobSyncSite, code, currentB2BSite, currentAuthS
                     <br />\
                     <input id='JobSync_LoginButton' type='button' class='_LoginButton' value='Sign In' onclick='ajaxLogin(&quot;" + currentJobSyncSite + "&quot;, &quot;" + currentB2BSite + "&quot;, &quot;" + currentAuthSite + "&quot;, &quot;" + code + "&quot;); return false;' />\
                     <div id='JobSync_LoadingFakeButton' class='_LoginButton Loading' style='display: none;'></div>\
-                    \
+                    <a class='_LoginLink' href='/contact'>Contact Us if you forget your password</a>\
                 </div>");
 }
