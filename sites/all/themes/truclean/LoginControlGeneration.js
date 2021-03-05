@@ -263,31 +263,45 @@ function initLoginSection(currentJobSyncSite, code, currentB2BSite, currentAuthS
         }
     }
 
+    // document.write("<div class='_LoginContainer'>\
+    //                     <span class='_LoginLabel UserName'>User Name</span>\
+    //                     <input id='JobSync_UserName' type='text' class='_LoginTextBox UserName' onkeypress='enterClicks(event);' value='" + username + "' />\
+    //                     <span class='_LoginLabel Password'>Password</span>\
+    //                     <input id='JobSync_Password' type='password' class='_LoginTextBox Password' onkeypress='enterClicks(event);' />\
+    //                     <span class='_LoginCheckBox'>\
+    //                         <input id='JobSync_Remember' type='checkbox' " + rememberString + ">\
+    //                         <label for='JobSync_Remember'>Remember Me</label>\
+    //                     </span>\
+    //                     <br />\
+    //                     <input id='JobSync_LoginButton' type='button' class='_LoginButton' value='Sign In' onclick='ajaxLogin(&quot;" + currentJobSyncSite + "&quot;, &quot;" + currentB2BSite + "&quot;, &quot;" + currentAuthSite + "&quot;, &quot;" + code + "&quot;); return false;' />\
+    //                     <div id='JobSync_LoadingFakeButton' class='_LoginButton Loading' style='display: none;'></div>\
+    //                     <a class='_LoginLink' href='#' onclick='showForgotPassword();'>I forgot my password</a>\
+    //                     <div id='JobSync_ForgotPasswordPanel' class='forgotPasswordPopup' style='display: none;'>\
+	// 						<div>\
+	// 							<span class='_ForgotPasswordInstruction'>Please enter your email address, and a link will be sent to you to reset your password.</span>\
+    //                             <div class='emailContainer'>\
+    //                                 <span class='_ForgotPasswordEmailLabel'>Email:</span>\
+    //                                 <input id='JobSync_ForgotPasswordEmail' type='text' class='_LoginTextBox ForgotPassword' />\
+    //                             </div>\
+    //                             <span id='JobSync_ForgotPasswordMessageDone' class='_ForgotPasswordEmailMessage' style='display: none;'>A link to reset your password has been sent to this email address. Click this link to login and reset your password.</span>\
+    //                         </div>\
+	// 						<div class='resetPasswordButtons'>\
+	// 							<input id='JobSync_ForgotPasswordSend' type='button' class='_LoginButton' value='Send Password' onclick='sendForgotPassword(&quot;" + currentJobSyncSite + "&quot;, &quot;" + currentB2BSite + "&quot;, &quot;" + currentAuthSite + "&quot;, &quot;" + code + "&quot;);' />\
+	// 						</div>\
+	// 					</div>\
+    //                 </div>");
     document.write("<div class='_LoginContainer'>\
-                        <span class='_LoginLabel UserName'>User Name</span>\
-                        <input id='JobSync_UserName' type='text' class='_LoginTextBox UserName' onkeypress='enterClicks(event);' value='" + username + "' />\
-                        <span class='_LoginLabel Password'>Password</span>\
-                        <input id='JobSync_Password' type='password' class='_LoginTextBox Password' onkeypress='enterClicks(event);' />\
-                        <span class='_LoginCheckBox'>\
-                            <input id='JobSync_Remember' type='checkbox' " + rememberString + ">\
-                            <label for='JobSync_Remember'>Remember Me</label>\
-                        </span>\
-                        <br />\
-                        <input id='JobSync_LoginButton' type='button' class='_LoginButton' value='Sign In' onclick='ajaxLogin(&quot;" + currentJobSyncSite + "&quot;, &quot;" + currentB2BSite + "&quot;, &quot;" + currentAuthSite + "&quot;, &quot;" + code + "&quot;); return false;' />\
-                        <div id='JobSync_LoadingFakeButton' class='_LoginButton Loading' style='display: none;'></div>\
-                        <a class='_LoginLink' href='#' onclick='showForgotPassword();'>I forgot my password</a>\
-                        <div id='JobSync_ForgotPasswordPanel' class='forgotPasswordPopup' style='display: none;'>\
-							<div>\
-								<span class='_ForgotPasswordInstruction'>Please enter your email address, and a link will be sent to you to reset your password.</span>\
-                                <div class='emailContainer'>\
-                                    <span class='_ForgotPasswordEmailLabel'>Email:</span>\
-                                    <input id='JobSync_ForgotPasswordEmail' type='text' class='_LoginTextBox ForgotPassword' />\
-                                </div>\
-                                <span id='JobSync_ForgotPasswordMessageDone' class='_ForgotPasswordEmailMessage' style='display: none;'>A link to reset your password has been sent to this email address. Click this link to login and reset your password.</span>\
-                            </div>\
-							<div class='resetPasswordButtons'>\
-								<input id='JobSync_ForgotPasswordSend' type='button' class='_LoginButton' value='Send Password' onclick='sendForgotPassword(&quot;" + currentJobSyncSite + "&quot;, &quot;" + currentB2BSite + "&quot;, &quot;" + currentAuthSite + "&quot;, &quot;" + code + "&quot;);' />\
-							</div>\
-						</div>\
-                    </div>");
+                    <span class='_LoginLabel UserName'>User Name</span>\
+                    <input id='JobSync_UserName' type='text' class='_LoginTextBox UserName' onkeypress='enterClicks(event);' value='" + username + "' />\
+                    <span class='_LoginLabel Password'>Password</span>\
+                    <input id='JobSync_Password' type='password' class='_LoginTextBox Password' onkeypress='enterClicks(event);' />\
+                    <span class='_LoginCheckBox'>\
+                        <input id='JobSync_Remember' type='checkbox' " + rememberString + ">\
+                        <label for='JobSync_Remember'>Remember Me</label>\
+                    </span>\
+                    <br />\
+                    <input id='JobSync_LoginButton' type='button' class='_LoginButton' value='Sign In' onclick='ajaxLogin(&quot;" + currentJobSyncSite + "&quot;, &quot;" + currentB2BSite + "&quot;, &quot;" + currentAuthSite + "&quot;, &quot;" + code + "&quot;); return false;' />\
+                    <div id='JobSync_LoadingFakeButton' class='_LoginButton Loading' style='display: none;'></div>\
+                    \
+                </div>");
 }
