@@ -125,6 +125,14 @@
     </div>
     <div class="row">
         <div class="small-6 columns">
+            <?php print drupal_render($form['submitted']['dispenser_condition_pre_result']); ?>
+        </div>
+        <div class="small-6 columns">
+            <?php print drupal_render($form['submitted']['dispenser_condition_post_result']); ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-6 columns">
             <?php print drupal_render($form['submitted']['pick_up_lines_pre_result']); ?>
         </div>
         <div class="small-6 columns">
@@ -176,7 +184,7 @@
             <?php print drupal_render($form['submitted']['drip_trays_pre_result']); ?>
         </div>
         <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['drip_trays_drip_post_result']); ?>
+            <?php print drupal_render($form['submitted']['drip_trays_post_result']); ?>
         </div>
     </div>
     <div class="row">
