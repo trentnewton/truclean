@@ -86,6 +86,7 @@ $(document).ready(function(){
         $('#edit-submitted-blend-centre-serial-number').attr('value',$('input[id*="edit-field-blend-centre-serial-number"]').attr('value'));
         $('#edit-submitted-call-out-type').attr('value',$('input[id*="edit-field-call-out-type"]').attr('value'));
         $('#edit-submitted-dispenser-configuration').attr('value',$('input[id*="edit-field-dispenser-configuration"]').attr('value'));
+        $('#edit-submitted-dispenser-configuration').attr('value',$('input[id*="edit-field-saftflo-caps"]').attr('value'));
       }, 1000 /* time to delay */ );
     }
 
