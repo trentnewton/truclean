@@ -116,91 +116,58 @@
 <fieldset class="fieldset-reset">
      <legend><strong><?php print t('Site Checks');?></strong></legend>
      <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['charts_and_data_sheets_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['charts_and_data_sheets_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['charts_and_data_sheets']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['dispenser_condition_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['dispenser_condition_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['dispenser_condition']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['pick_up_lines_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['pick_up_lines_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['pick_up_lines']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['water_pressure_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['water_pressure_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['water_pressure']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['water_line_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['water_line_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['water_line']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['water_filters_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['water_filters_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['water_filters']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['filters_and_weights_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['filters_and_weights_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['filters_and_weights']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['product_dilutions_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['product_dilutions_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['product_dilutions']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['drip_trays_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['drip_trays_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['drip_trays']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['dispenser_labelling_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['dispenser_labelling_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['dispenser_labelling']); ?>
         </div>
     </div>
     <div class="row">
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['trigger_bottles_pre_result']); ?>
-        </div>
-        <div class="small-6 columns">
-            <?php print drupal_render($form['submitted']['trigger_bottles_post_result']); ?>
+        <div class="small-12 columns">
+            <?php print drupal_render($form['submitted']['trigger_bottles']); ?>
         </div>
     </div>
 </fieldset>
